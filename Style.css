@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.yellow_Parent{
+    background-color: #F4CF1B ;
+}
+.yellow_Parent h3{
+     color:#1078AD;
+    font-size:20px;
+}
+.in_section_first_div h3{
+    font-size:25px;
+    color:#1078AD;
+}
+.in_section_first_div p{
+    font-size:19px;
+    font-weight:bold;
+    color:#7F7F7F;
+}
+
+.btn_start{
+    height:60px;
+    background-image: url("image/Merged bar-13.svg");
+    color:#1078AD;
+    font-size: 27px;
+    font-weight:bold;
+    border-radius: 13px;
+}
+.btn_start:hover{
+    background-color: #1078AD;
+    color:white;
+}
+.img_home{
+    width:90%;
+}
+.main_images{
+    margin-top:7rem ;
+}
+.main_first_h2{
+    color:#1078AD;
+}
