@@ -1,3 +1,4 @@
+
 *{
   font-family: 'Cairo', sans-serif;
 }
@@ -66,16 +67,19 @@
     }
 
 }
-
-.progress-container {
-    display: flex;
+.container_stepper{
     margin: 0 auto 30px;
+}
+.progress-container ,.par_progress-container {
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    /*justify-content:center;*/
     position: relative;
     width: 350px;
     max-width: 100%;
 }
+
 
 .progress-container:before {
     content: "";
@@ -84,6 +88,9 @@
     height: 3px;
     position: absolute;
     z-index: -1;
+
+
+
 }
 
 .progress {
@@ -99,8 +106,8 @@
 
 .circle {
     /*background: #fff;*/
-    height: 11px;
-    width: 11px;
+    height: 13px;
+    width: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,15 +115,19 @@
     background-color:#1078AD;
     border-radius: 50px;
 }
+
 .sml_crcl2{
     background-color: #F4CF1B;
 }
+ 
 
 .active_1 ,.active_2,.active_3 {
     background-color: #6e9ebd;
     width: 30px;
     height: 30px;
     transition: 0.6s ease-in;
+    border-radius: 50px;
+
 }
 
 /* introduction & result page */

@@ -10,6 +10,7 @@
 </head>
 
 <body class="">
+
 <!--<div id="includedStepper"></div>-->
 
 
@@ -33,27 +34,37 @@
 <!--    })-->
 <!--    var stepper4 = new Stepper(document.querySelector('#stepper4'))-->
 <!--</script>-->
+
+<script src="nav.js"></script>
+<!--<script src="Include/stepper.js"></script>-->
+ <div class="container_stepper mt-5 d-flex flex-column align-items-center">
+         <div class="progress-container ">
+             <div class="progress" id="progress"></div>
+             <div class="active_1  d-flex  align-items-center justify-content-center">
+                     <div class="circle sml_crcl1"></div>
+             </div>
+
+             <div class="active_2   d-flex justify-content-center align-items-center">
+                 <div class="circle sml_crcl2"></div>
+             </div>
+             <div class=" active_3 d-flex justify-content-center align-items-center">
+                 <div class="circle sml_crcl3 "></div>
+             </div>
+
+        </div>
+     <div class="par_progress-container d-flex justify-content-between align-items-center">
+     <p>Informations</p>
+     <p>Questionnaire</p>
+     <p>Résultats</p>
+ </div>
+ </div>
     <div class="yellow_Parent d-flex flex-column align-items-center">
         <div><h3>LA DERNIÈRE INFO MÉDICALE</h3></div>
         <div class="text-center"><p>La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol.<br>
             N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.</p>
         </div>
     </div>
-<div class="container_stepper mt-5">
-    <div class="progress-container">
-        <div class="progress" id="progress"></div>
-        <div class="circle active_1  d-flex  align-items-center">
-            <div class="circle sml_crcl1"></div>
-        </div>
-         <div class="circle active_2   d-flex justify-content-center align-items-center">
-            <div class="circle sml_crcl2"></div>
-        </div>
-        <div class="circle active_3 d-flex justify-content-right align-items-center">
-            <div class="circle sml_crcl3"></div>
-        </div>
 
-
-</div>
     <section class="first_section_home d-flex container-fluid">
 
         <div class="mt-4 col-lg-6 col-sm-12 d-flex justify-content-center">
@@ -66,10 +77,10 @@
             <p>Je programme une téléconsultation ?</p>
             <p>J'appelle le 141 ?</p>
             <p>Faites le test pour répondre en<br>citoyen éclairé selon vos symptômes.</p>
-            <button class="btn_start w-75 mt-3"><a href="AllQuestions.html"></a>  Démarrer le test</button>
+            <a class="btn_start w-75 mt-3 text-decoration-none text-center" href="AllQuestion.html">Démarrer le test</a>
         </div>
     </section>
-    <main class="main_images">
+    <main class="main_images" style="margin-bottom:50px;">
         <div class="d-flex justify-content-center">
             <h2 class="main_first_h2">Quels sont les symptômes à surveiller ?</h2>
         </div>
@@ -100,7 +111,7 @@
         </div>
     </main>
 
-
+<script src="Include/footer.js"></script>
 </body>
 
 </html>
