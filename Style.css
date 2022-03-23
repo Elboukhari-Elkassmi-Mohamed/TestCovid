@@ -119,3 +119,52 @@
     height: 30px;
     transition: 0.6s ease-in;
 }
+
+.navbar {
+  background-image: url(./SVG/Merged\ bar-60.svg);
+  padding: 0px 5vw;
+}
+
+#Language {
+  background-image: url(./SVG/Merged\ bar-21.svg);
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.empty {
+  height: 100px;
+}
+
+.line {
+  margin: auto;
+  width: 200px;
+  background-color: rgb(255, 238, 0);
+}
+
+.paragraph {
+  background-color: #96c5dc;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btnEnd {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+    /* ###########  Error404 PAGE ################################# */
+    
+    .first-colorbg {
+        background-color: #1078AD;
+    }
+    
+    .first-color {
+        color: #1078AD;
+    }
+    
+    .error404 {
+        font-family: 'Cairo', sans-serif;
+    }
+
