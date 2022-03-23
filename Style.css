@@ -1,12 +1,17 @@
+*{
+  font-family: 'Cairo', sans-serif;
+}
 .navbar {
-  background-image: url(./SVG/Merged\ bar-60.svg);
+  background-image: url(./Assets/nav-Img.svg);
   padding: 0px 5vw;
 }
 
 #Language {
-  background-image: url(./SVG/Merged\ bar-21.svg);
+  background-image: url(./Assets/nav-Img.svg);
   border-radius: 10px;
   margin-left: 50px;
+  border: 1px solid rgba(3, 104, 163, 0.815);
+  padding: 5px;
 }
 
 .empty {
@@ -31,6 +36,7 @@
   justify-content: center;
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
     /* ###########  Error404 PAGE ################################# */
     
