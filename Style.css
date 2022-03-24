@@ -150,9 +150,6 @@
         padding: 5px;
     }
     
-    .empty {
-        height: 100px;
-    }
     
     .line {
         margin: auto;
@@ -167,7 +164,7 @@
         text-align: center;
     }
     
-    .btnEnd {
+    .btnEnd a {
         display: flex;
         justify-content: center;
         text-align: center;
