@@ -1,70 +1,78 @@
-*{
-  font-family: 'Cairo', sans-serif;
+* {
+    font-family: 'Cairo', sans-serif;
 }
 
-.yellow_Parent{
-    background-color: #F4CF1B ;
+.yellow_Parent {
+    background-color: #F4CF1B;
 }
-.yellow_Parent h3{
-     color:#1078AD;
-    font-size:20px;
+
+.yellow_Parent h3 {
+    color: #1078AD;
+    font-size: 20px;
 }
-.in_section_first_div h3{
-    font-size:25px;
-    color:#1078AD;
+
+.in_section_first_div h3 {
+    font-size: 25px;
+    color: #1078AD;
 }
-.in_section_first_div p{
-    font-size:19px;
-    font-weight:bold;
-    color:#7F7F7F;
+
+.in_section_first_div p {
+    font-size: 19px;
+    font-weight: bold;
+    color: #7F7F7F;
     text-align: center;
 }
 
-.btn_start{
-    height:60px;
+.btn_start {
+    height: 60px;
     background-image: url("image/Merged bar-13.svg");
-    color:#1078AD;
+    color: #1078AD;
     font-size: 27px;
-    font-weight:bold;
+    font-weight: bold;
     border-radius: 13px;
 }
-.btn_start:hover{
-    background-color: #1078AD;
-    color:white;
-}
-.img_home{
-    width:90%;
-}
-.main_images{
-    margin-top:7rem ;
-}
-.main_first_h2{
-    color:#1078AD;
-}
-.four_images h4{
-    color: #1078AD;
-    text-align:center;
-}
-.four_images img{
-    width:200px !important;
-}
-@media (max-width: 1000px){
 
-    .two_img_first , .two_img_last{
-        flex-direction:column;
+.btn_start:hover {
+    background-color: #1078AD;
+    color: white;
+}
+
+.img_home {
+    width: 90%;
+}
+
+.main_images {
+    margin-top: 7rem;
+}
+
+.main_first_h2 {
+    color: #1078AD;
+}
+
+.four_images h4 {
+    color: #1078AD;
+    text-align: center;
+}
+
+.four_images img {
+    width: 200px !important;
+}
+
+@media (max-width: 1000px) {
+    .two_img_first,
+    .two_img_last {
+        flex-direction: column;
         align-items: center;
         gap: 4rem;
     }
-
-    .img_home{
-        width:70%;
+    .img_home {
+        width: 70%;
     }
-    .first_section_home{
+    .first_section_home {
         display: flex;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
     }
-
 }
 
 .progress-container {
@@ -105,72 +113,75 @@
     align-items: center;
     justify-content: center;
     /*border: 3px solid #F4CF1B;*/
-    background-color:#1078AD;
+    background-color: #1078AD;
     border-radius: 50px;
 }
-.sml_crcl2{
+
+.sml_crcl2 {
     background-color: #F4CF1B;
 }
 
-.active_1 ,.active_2,.active_3 {
+.active_1,
+.active_2,
+.active_3 {
     background-color: #6e9ebd;
     width: 30px;
     height: 30px;
     transition: 0.6s ease-in;
 }
 
+
 /* introduction & result page */
+
 .navbar {
-  background-image: url(./Assets/nav-Img.svg);
-  padding: 0px 5vw;
+    background-image: url(./Assets/nav-Img.svg);
+    padding: 0px 5vw;
 }
 
 #Language {
-  background-image: url(./Assets/nav-Img.svg);
-  border-radius: 10px;
-  margin-left: 50px;
-  border: 1px solid rgba(3, 104, 163, 0.815);
-  padding: 5px;
+    background-image: url(./Assets/nav-Img.svg);
+    border-radius: 10px;
+    margin-left: 50px;
+    border: 1px solid rgba(3, 104, 163, 0.815);
+    padding: 5px;
 }
 
 .empty {
-  height: 100px;
+    height: 100px;
 }
 
 .line {
-  margin: auto;
-  width: 200px;
-  background-color: rgb(255, 238, 0);
+    margin: auto;
+    width: 200px;
+    background-color: rgb(255, 238, 0);
 }
 
 .paragraph {
-  background-color: #96c5dc;
-  padding: 40px;
-  border-radius: 5px;
-  text-align: center;
+    background-color: #96c5dc;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .btnEnd {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-    /* ###########  Error404 PAGE ################################# */
-    
-    .first-colorbg {
-        background-color: #1078AD;
-    }
-    
-    .first-color {
-        color: #1078AD;
-    }
-    
-    .error404 {
-        font-family: 'Cairo', sans-serif;
-     
 
-    }
+/* ###########  Error404 PAGE ################################# */
 
+.first-colorbg {
+    background-color: #1078AD;
+}
+
+.first-color {
+    color: #1078AD;
+}
+
+.error404 {
+    font-family: 'Cairo', sans-serif;
+}
