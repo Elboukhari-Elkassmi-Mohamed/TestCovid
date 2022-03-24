@@ -93,7 +93,7 @@
 
 }
 
-.progress {
+.progress_first {
     width: 0;
     background-color: red;
     height: 5px;
