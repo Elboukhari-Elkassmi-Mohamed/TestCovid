@@ -469,6 +469,34 @@
 
         )
     </script>
+<script>
+    const suivant = document.querySelector('.suivant');
+    const fiv = document.querySelector('.')
+    console.log(suivant)
+    class Fiever{
+        constructor(fiever , tempetature , toux , douleur ,mal_gorgr , diarrhe ,fatigue ,difuculte ,apparaitre ,sentinent , champlibre) {
+            this.fiever = fiever;
+            this.tempetature = tempetature;
+            this.toux = toux;
+            this.douleur = douleur;
+            this.mal_gorgr = mal_gorgr;
+            this.fatigue = fatigue;
+            this.difuculte = difuculte;
+            this.apparaitre = apparaitre;
+            this.sentinent = sentinent;
+            this.champlibre = champlibre;
+
+        }
+    }
+
+
+    suivant.addEventListener('click', (e) => {
+        const res_fiever = new Fiever(fiever.value, taille.value, poid.value, hyper_existe.value ,);
+        console.log(suivant)
+
+
+    })
+</script>
 </body>
 
 </html>
