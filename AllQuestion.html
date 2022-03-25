@@ -47,11 +47,11 @@
                     <div class="carousel-item  active ">
                         <h1 class="card-title text-secondary pb-5">1-Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?</h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non2">
+                            <input type="radio" class="btn-check answerNo fievre_non_existe" name="options-outlined" id="non2">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non2" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui2">
+                            <input type="radio" class="btn-check answerNo fievre_existe" name="options-outlined" id="oui2">
                             <label class="btn fw-bold btn-outline-primary" for="oui2" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -240,7 +240,7 @@
 
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">ans</span>
-                            <input type="number " class="form-control " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " class="form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -250,7 +250,7 @@
                         <h1 class="card-title text-secondary pb-5 "> 13-Quel est votre poids ? </h1>
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">Kg</span>
-                            <input type="number " class="form-control " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " class="form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -261,7 +261,7 @@
                         <h1 class="card-title text-secondary pb-5 ">14-Quelle est votre taille ? </h1>
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">Cm</span>
-                            <input type="number " class="form-control " placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " class="form-control taille" placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -271,11 +271,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 "> 15-Avez-vous de l’hypertension artérielle ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ? </h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non15">
+                            <input type="radio" class="btn-check answerNo hypertension_non " name="options-outlined" id="non15">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non15" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui15">
+                            <input type="radio" class="btn-check answerNo hypertension_oui" name="options-outlined" id="oui15">
                             <label class="btn fw-bold btn-outline-primary" for="oui15" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -416,7 +416,7 @@
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non23" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui23">
+                            <input type="radio" class="btn-check answerNo " name="options-outlined" id="oui23">
                             <label class="btn fw-bold btn-outline-primary" for="oui23" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -429,16 +429,17 @@
                 </div>
             </div>
             <div class="container d-flex justify-content-between "><button type="button " class="btn border border-3 président mb-3" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="prev">précédent</button>
-                <button type="button " class="btn border border-3 suivante mb-3" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button></div>
+                <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button></div>
 
         </div>
     </div>
 
 
     <script src="./Include/footer.js"></script>
+    <script src="Script.js"></script>
 
 
-    
+
     <!-- JavaScript Bundle with Popper -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
     <script>
