@@ -45,7 +45,7 @@
                 <div class="carousel-inner card-body ">
                     <!-- question 1 -->
                     <div class="carousel-item  active ">
-                        <h1 class="card-title text-secondary pb-5">1-Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?</h1>
+                        <h1 class="qu_fievre card-title text-secondary pb-5">1-Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?</h1>
                         <div class="container  d-flex justify-content-center pb-5">
                             <input type="radio" class="btn-check answerNo" name="options-outlined" id="non2">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non2" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
@@ -475,7 +475,8 @@
     </script>
 <script>
     const suivant = document.querySelector('.suivant');
-    const fiv = document.querySelector('.')
+    const fiv = document.querySelector('.answerNo');
+    const fiv = document.querySelector('.answerNo');
     console.log(suivant)
     class Fiever{
         constructor(fiever , tempetature , toux , douleur ,mal_gorgr , diarrhe ,fatigue ,difuculte ,apparaitre ,sentinent , champlibre) {
