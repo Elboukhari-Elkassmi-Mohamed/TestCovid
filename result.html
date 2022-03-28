@@ -15,7 +15,9 @@
   <body>
   <script src="./Include/nav.js"></script>
 
-    <div class="empty"></div>
+  <div>    
+    <script src="./Include/stepper.js"></script>
+  </div>
 
     <article>
         <h1 class="text-center " style="color: #059619;">votre diagnostic médical :</h1>
@@ -31,14 +33,20 @@
       </div>
     </article>
 
-    <end class="btnEnd">
-      <button type="button" class="btn btn-lg col-lg-3 col-md-6 col-sm-6 text-align: center;" style="background-color: #1078AD"> Redemmarer le test </button>
-    </end>
 
+    <div class="btnEnd">
+      <a href="AllQuestion.html" class="text-decoration-none"><button  type="button" class="btn btn-lg col-lg-3 col-md-6 col-sm-6  text-decoration-none" style="background-color: #1078AD"> Redemmarer le test </button>
+    </div></a>
 
     <script src="./Include/footer.js"></script>
 
-
+<script>
+  //stepper
+  const allCircle = document.querySelector('.circle');
+  allCircle.style.backgroundColor = '#1078AD';
+  const activeCircle = document.querySelector('.circle3');
+  activeCircle.style.backgroundColor = '#F4CF1B';
+</script>
     <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
