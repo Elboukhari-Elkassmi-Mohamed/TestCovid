@@ -22,9 +22,11 @@
 </head>
 
 <body>
+
     <script src="./Include/nav.js"></script>
     <div>    
         <script src="./Include/stepper.js"></script>
+        
       </div>
       
     <br>
@@ -41,23 +43,24 @@
                 </div>
                 <span class="fw-bolder num_question">1/23</span>
             </div>
-            <div id="carouselExampleControls" class="carousel slide h-75" data-bs-interval="false">
+            <div id="carouselExampleControls" class="carousel slide h-75">
                 <div class="carousel-inner card-body ">
                     <!-- question 1 -->
                     <div class="carousel-item  active ">
                         <h1 class="qu_fievre card-title text-secondary pb-5">1-Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?</h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo fievre_non_existe" name="options-outlined" id="non2">
+                            <input type="radio" class=" answNo btn-check answerNo fievre_non_existe" name="options-outlined" id="non2">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non2" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo fievre_existe" name="options-outlined" id="oui2">
+                            <input type="radio" class=" answYes btn-check answerNo fievre_existe" name="options-outlined" id="oui2">
                             <label class="btn fw-bold btn-outline-primary" for="oui2" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
                         </div>
                     </div>
+
                     <!-- QUESTION 2 -->
                     <div class="carousel-item ">
 
@@ -66,18 +69,18 @@
                         <div class="input-group mb-3 ">
 
                             <span class="input-group-text " id="basic-addon1 ">Température</span>
-                            <input type="number " class="form-control " placeholder="35 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " class="number_inputs form-control " id="temperature" placeholder="35 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
                     </div>
                     <!-- question 3 -->
                     <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 3-Avez-vous une toux ou une augmentation de votre toux habituelle ces derniers jours ?</h1>
+                        <h1 class="qu_toux card-title text-secondary pb-5 "> 3-Avez-vous une toux ou une augmentation de votre toux habituelle ces derniers jours ?</h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non3">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non3">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non3" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui3">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui3">
                             <label class="btn fw-bold btn-outline-primary" for="oui3" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -89,11 +92,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 ">4-Avez-vous des douleurs musculaires ou des courbatures inhabituelles ces derniers jours ?</h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non4">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non4">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non4" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui4">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui4">
                             <label class="btn fw-bold btn-outline-primary" for="oui4" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -104,11 +107,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 ">5- Avez-vous un mal de gorge apparu ces derniers jours ?</h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non5">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non5">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non5" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui5">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui5">
                             <label class="btn fw-bold btn-outline-primary" for="oui5" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -121,11 +124,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 "> 6-Avez-vous de la diarrhée ces dernières 24 heures(au moins 3 selles molles) ? </h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non6">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non6">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non6" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui6">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui6">
                             <label class="btn fw-bold btn-outline-primary" for="oui6" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -138,11 +141,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 "> 7-Avez-vous une fatigue inhabituelle ces derniers jours ? </h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non7">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non7">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non7" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui7">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui7">
                             <label class="btn fw-bold btn-outline-primary" for="oui7" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -155,11 +158,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 "> 8-cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ? </h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non8">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non8">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non8" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="8">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui8">
                             <label class="btn fw-bold btn-outline-primary" for="oui8" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -171,11 +174,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 "> 9-Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ? </h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non9">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non9">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non9" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui9">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui9">
                             <label class="btn fw-bold btn-outline-primary" for="oui9" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -187,11 +190,11 @@
                     <div class="carousel-item ">
                         <h1 class="card-title text-secondary pb-5 ">10- Avez-vous vu apparaître une gêne respiratoire ou une augmentation de votre gêne respiratoire habituelle ?</h1>
                         <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non10">
+                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non10">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="non10" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui10">
+                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui10">
                             <label class="btn fw-bold btn-outline-primary" for="oui10" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
@@ -205,23 +208,23 @@
                         <h1 class="card-title text-secondary pb-5 "> 11-Comment vous sentez-vous ?</h1>
                         <div class="container d-flex justify-content-center pb-5 ">
 
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="bien">
+                            <input type="radio" class="senter ? btn-check answerNo" name="options-outlined" id="bien">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="bien" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-sunglasses "></i>
                                     <br> Bien
                             </label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="AssezBien">
+                            <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="AssezBien">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="AssezBien" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-smile "></i>
                                     <br> Assez bien
                             </label>
 
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="mal">
+                            <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="mal">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="mal" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-frown "></i>
                                     <br> mal
                             </label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="TresMal">
+                            <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="TresMal">
                             <label class="btn fw-bold me-5 btn-outline-primary" for="TresMal" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-dizzy "></i>
                                     <br> très mal
@@ -240,7 +243,7 @@
 
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">ans</span>
-                            <input type="number " class="form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " id="age" class="number_inputs form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -250,7 +253,7 @@
                         <h1 class="card-title text-secondary pb-5 "> 13-Quel est votre poids ? </h1>
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">Kg</span>
-                            <input type="number " class="form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " id="poid" class="number_inputs form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -261,7 +264,7 @@
                         <h1 class="card-title text-secondary pb-5 ">14-Quelle est votre taille ? </h1>
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">Cm</span>
-                            <input type="number " class="form-control taille" placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " id="taille" class="number_inputs form-control taille" placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -440,14 +443,42 @@
 
 
 
+
     <!-- JavaScript Bundle with Popper -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+
     <script>
+        //stepper
+        const allCircle = document.querySelector('.circle');
+        allCircle.style.backgroundColor = '#1078AD';
+        const activeCircle = document.querySelector('.circle2');
+        activeCircle.style.backgroundColor = '#F4CF1B';
+
+        //select all the inputs
+        let symptomes ={};// objet
+        const answor_yes = document.querySelectorAll('.answYes');
+        const answor_no = document.querySelectorAll('.answNo');
+        const allInputs_number = document.querySelectorAll('.number_inputs');
+        const senter = document.querySelectorAll('.senter');
+        const regNumber = new RegExp('^[0-9]+$');
+        let boolSave = null;
+        let saveKey = null;// save key or Id => input
+
         // for the  progres bar 
         let value = 0;
         let nbr = 1;
         // suivante
-        document.querySelector(".suivante").addEventListener("click", () => {
+        document.querySelector(".suivant").addEventListener("click", () => {
+
+// click suivant jamal
+              if(boolSave === true){
+                  save_Value(saveKey);
+              }
+            if(boolSave === false){
+                delete_Value(saveKey);
+            }
+// end click jamal
+                console.log(symptomes);
                     if (value <= 100) {
                         value += (100 / 22);
                         nbr++;
@@ -457,10 +488,13 @@
                         value = 0;
                         document.querySelector(".progress-bar").style.width = value + "%";
                     }
+                boolSave = null;//jamal
+                saveKey = null;//jamal
                 }
 
             ) //     présidente
         document.querySelector(".président").addEventListener("click", () => {
+
                 if (value <= 100) {
                     value -= (100 / 22);
                     nbr--;
@@ -473,35 +507,227 @@
             }
 
         )
-    </script>
-<script>
-    const suivant = document.querySelector('.suivant');
-    const fiv = document.querySelector('.answerNo');
-    const fiv = document.querySelector('.answerNo');
-    console.log(suivant)
-    class Fiever{
-        constructor(fiever , tempetature , toux , douleur ,mal_gorgr , diarrhe ,fatigue ,difuculte ,apparaitre ,sentinent , champlibre) {
-            this.fiever = fiever;
-            this.tempetature = tempetature;
-            this.toux = toux;
-            this.douleur = douleur;
-            this.mal_gorgr = mal_gorgr;
-            this.fatigue = fatigue;
-            this.difuculte = difuculte;
-            this.apparaitre = apparaitre;
-            this.sentinent = sentinent;
-            this.champlibre = champlibre;
+//start jamal
+        answor_yes.forEach(yes => {
+            yes.addEventListener("click" , function(){
+                boolSave = true;
+               saveKey = yes.id;
+            })
+        })
 
-        }
-    }
+        answor_no.forEach(no => {
+            no.addEventListener("click" , function(){
+                boolSave = false;
+                saveKey = no.id;
+            })
+        })
+        // comment_vous_sentez_vous
+        comment_vous.forEach(oneOfradio => {
+            oneOfradio.addEventListener("click" , function(){
+                boolSave = true;
+                saveKey = oneOfradio.id;
+            })
+        })
+        allInputs_number.forEach(oneOfinput => {
+            oneOfinput.addEventListener("blur", function(){
+                // oneOfinput.value = new RegExp(regNumber);
+                if(regNumber.test(oneOfinput.value)){
+                    oneOfinput.style.border = '1px solid gray';
+                    switch (oneOfinput.id){
+                        case 'temperature':{
+                            if(oneOfinput.value <=45 && oneOfinput.value >= 25){
+                                symptomes['temperature'] = oneOfinput.value;
+                            }
+                            else{
+                                oneOfinput.style.border = '2px solid red';
+                                oneOfinput.focus;
+                            }
+                            break;
+                        }
+
+                        //     case 'age':{
+                        //     if(oneOfinput.value <=15){
+                        //         alert('Prenez contact avec votre médecin généraliste au moindre' +
+                        //             'doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins' +
+                        //             'de 15 ans. En cas d’urgence, appeler le 15.');
+                        //         symptomes={};
+                        //          window.location.href='index.html';
+                        //     }
+                        //     if(oneOfinput.value >=16 && oneOfinput.value <= 100){
+                        //         symptomes['age'] = oneOfinput.value;
+                        //     }
+                        //     break;
+                        // }
+                        // case 'poid':{
+                        //     symptomes['poid'] = oneOfinput.value;
+                        //     break;
+                        // }
+                        // case 'taille':{
+                        //     symptomes['taille'] = oneOfinput.value;
+                        //     break;
+                        // }
+                        //
 
 
-    suivant.addEventListener('click', (e) => {
-        const res_fiever = new Fiever(fiever.value, taille.value, poid.value, hyper_existe.value ,);
-        console.log(suivant)
+                    }
+                }
+                else{
+                    oneOfinput.style.border = '2px solid red';
+                    oneOfinput.focus;
+                }
+
+            })
+
+        })
+        //symptomes
+
+       function save_Value (saveKey){
+          switch(saveKey){
+              case "oui2":{
+                  symptomes['fievre1'] = true;
+                  break;
+              }
+
+              case "oui3":{
+                  symptomes['toux'] = true;
+                  break;
+              }
+
+              case "oui4":{
+                  symptomes['douleur'] = true;
+                  break;
+              }
+              case "oui5":{
+                  symptomes['mal_gorgr'] = true;
+                  // alert(symptomes['mal_gorgr'])
+                  break;
+              }
+              case "oui6":{
+                  symptomes['diarrhe'] = true;
+                  break;
+              }
+              case "oui7":{
+                  symptomes['fatigue'] = true;
+                  break;
+              }
+              case "oui8":{
+                  symptomes['fatigue_moitie_jour'] = true;
+                  break;
+              }
+              case "oui9":{
+                  symptomes['difuculte'] = true;
+                  break;
+              }
+              case "oui10":{
+                  symptomes['apparaitre'] = true;
+
+                  break;
+              }
+              // case "oui11":{
+              //     symptomes['sentinent'] = true;
+              //     break;
+              // }
+              // case "oui12":{
+              //     symptomes['champlibre'] = true;
+              //     console.log(symptomes);
+              //     break;
+              // }
+             //bien AssezBien mal TresMal
+              case "bien":{
+                  symptomes['senter'] = 'Bien';
+                  break;
+              }
+              case "AssezBien":{
+                  symptomes['senter'] = 'Assez Bien';
+
+                  break;
+              }
+              case "mal":{
+                  symptomes['senter'] = 'Mal';
+
+                  break;
+              }
+              case "TresMal":{
+                  symptomes['senter'] = 'Très Mal';
+                  break;
+              }
+          }
+
+       }
+
+       function delete_Value(saveKey){
+            switch (saveKey){
+                case "non2":{
+                    delete symptomes['fievre1'];
+                    break;
+                }
+                case "non3":{
+                    delete symptomes['toux'];
+
+                    break;
+                }
+                case "non4":{
+                    delete symptomes['douleur'];
+
+                    break;
+                }
+                case "non5":{
+                    delete symptomes['mal_gorgr'];
+
+                    break;
+                }
+                case "non6":{
+                    delete symptomes['diarrhe'];
+
+                    break;
+                }
+                case "non7":{
+                    delete symptomes['fatigue'];
+
+                    break;
+                }
+
+                case "non8":{
+                    delete symptomes['fatigue_moitie_jour'];//moitié de la journée
+
+                    break;
+                }
+                case "non9":{
+                    delete symptomes['difuculte'];
+
+                    break;
+                }
+                case "non10":{
+                    delete symptomes['apparaitre'];
+
+                    break;
+                }
+            }
+       }
+    // class Fiever{
+    //     constructor(fiever , tempetature , toux , douleur ,mal_gorgr , diarrhe ,fatigue ,difuculte ,apparaitre ,sentinent , champlibre) {
+    //         this.fiever = fiever;
+    //         this.tempetature = tempetature;
+    //         this.toux = toux;
+    //         this.douleur = douleur;
+    //         this.mal_gorgr = mal_gorgr;
+    //         this.fatigue = fatigue;
+    //         this.difuculte = difuculte;
+    //         this.apparaitre = apparaitre;
+    //         this.sentinent = sentinent;
+    //         this.champlibre = champlibre;
+    //
+    //     }
+    // }
 
 
-    })
+    // suivant.addEventListener('click', (e) => {
+    //
+    //     const res_fiever = new Fiever(fiever.value, tempetature.value, toux.value, douleur.value ,mal_gorgr.value, diarrhe.value, fatigue.value, difuculte.value, apparaitre.value, sentinent.value, champlibre.value );
+    //
+    // })
+
+// end jamal
 </script>
 </body>
 

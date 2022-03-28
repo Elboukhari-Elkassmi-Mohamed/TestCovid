@@ -32,7 +32,7 @@
             <p>Je programme une téléconsultation ?</p>
             <p>J'appelle le 141 ?</p>
             <p>Faites le test pour répondre en<br>citoyen éclairé selon vos symptômes.</p>
-            <a class="btn_start w-75 mt-3 text-decoration-none text-center" href="start.html">Démarrer le test</a>
+            <a class="btn_start w-75 mt-3 text-decoration-none text-center pt-2" >Démarrer le test</a>
         </div>
     </section>
     <main class="main_images" style="margin-bottom:50px;">
@@ -61,12 +61,20 @@
                     <h4>Gêne respiratoire</h4>
                 </div>
 
-
              </div>
         </div>
     </main>
-
+<script>
+    const btn_start = document.querySelector(".btn_start");
+    btn_start.addEventListener('click', function(){
+        // console.log('true')
+        // btn_start.style = 'sml_crcl2';
+        window.location.href='start.html';
+    })
+</script>
 <script src="Include/footer.js"></script>
+
 </body>
 
 </html>
+<!-- sml_crcl2 -->
