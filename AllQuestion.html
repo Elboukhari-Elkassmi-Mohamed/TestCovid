@@ -43,7 +43,7 @@
                 </div>
                 <span class="fw-bolder num_question">1/23</span>
             </div>
-            <div id="carouselExampleControls" class="carousel slide h-75">
+            <div id="carouselExampleControls" data-bs-interval="false" class="carousel slide h-75 " data-bs-touch="false">
                 <div class="carousel-inner card-body ">
                     <!-- question 1 -->
                     <div class="carousel-item  active ">
@@ -69,7 +69,7 @@
                         <div class="input-group mb-3 ">
 
                             <span class="input-group-text " id="basic-addon1 ">Température</span>
-                            <input type="number " class="number_inputs form-control " id="temperature" placeholder="35 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " class="number_input form-control " id="temperature" placeholder="35 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
                     </div>
                     <!-- question 3 -->
@@ -243,7 +243,7 @@
 
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">ans</span>
-                            <input type="number " id="age" class="number_inputs form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " id="age" class=" form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -253,7 +253,7 @@
                         <h1 class="card-title text-secondary pb-5 "> 13-Quel est votre poids ? </h1>
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">Kg</span>
-                            <input type="number " id="poid" class="number_inputs form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " id="poid" class=" form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -264,7 +264,7 @@
                         <h1 class="card-title text-secondary pb-5 ">14-Quelle est votre taille ? </h1>
                         <div class="input-group mb-3 ">
                             <span class="input-group-text " id="basic-addon1 ">Cm</span>
-                            <input type="number " id="taille" class="number_inputs form-control taille" placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            <input type="number " id="taille" class=" form-control taille" placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
                     </div>
@@ -456,9 +456,11 @@
 
         //select all the inputs
         let symptomes ={};// objet
-        const answor_yes = document.querySelectorAll('.answYes');
-        const answor_no = document.querySelectorAll('.answNo');
-        const allInputs_number = document.querySelectorAll('.number_inputs');
+        let majeur ={};// objet
+        let mineur ={};// objet
+        const answer_yes = document.querySelectorAll('.answYes');
+        const answer_no = document.querySelectorAll('.answNo');
+        const Inputs_number = document.querySelector('.number_input');
         const senter = document.querySelectorAll('.senter');
         const regNumber = new RegExp('^[0-9]+$');
         let boolSave = null;
@@ -479,6 +481,8 @@
             }
 // end click jamal
                 console.log(symptomes);
+                console.log(majeur);
+                console.log(mineur);
                     if (value <= 100) {
                         value += (100 / 22);
                         nbr++;
@@ -508,77 +512,61 @@
 
         )
 //start jamal
-        answor_yes.forEach(yes => {
+        answer_yes.forEach(yes => {
             yes.addEventListener("click" , function(){
                 boolSave = true;
                saveKey = yes.id;
             })
         })
 
-        answor_no.forEach(no => {
+        answer_no.forEach(no => {
             no.addEventListener("click" , function(){
                 boolSave = false;
                 saveKey = no.id;
             })
         })
         // comment_vous_sentez_vous
-        comment_vous.forEach(oneOfradio => {
+        senter.forEach(oneOfradio => {
             oneOfradio.addEventListener("click" , function(){
                 boolSave = true;
                 saveKey = oneOfradio.id;
             })
         })
-        allInputs_number.forEach(oneOfinput => {
-            oneOfinput.addEventListener("blur", function(){
+        Inputs_number.addEventListener("blur", function(){
                 // oneOfinput.value = new RegExp(regNumber);
-                if(regNumber.test(oneOfinput.value)){
-                    oneOfinput.style.border = '1px solid gray';
-                    switch (oneOfinput.id){
+                if(regNumber.test(Inputs_number.value)){
+                    let value = Inputs_number.value;
+                    Inputs_number.style.border = '1px solid gray';
+                    switch (Inputs_number.id){
                         case 'temperature':{
-                            if(oneOfinput.value <=45 && oneOfinput.value >= 25){
-                                symptomes['temperature'] = oneOfinput.value;
+                            delete symptomes['temperature'];//delete for not repeat
+                            delete majeur['temp_majeur'];
+                            delete majeur['temp_majeur'];
+
+                            if(value <39 && value > 35){
+                                symptomes['temperature'] = parseInt(value);
+                            }
+                            else if(value <= 35 && value >= 30){
+                                majeur['temp_majeur'] = parseInt(value);
+                            }
+                            else if(value >= 39 && value <= 42){
+                                mineur['temp_mineur'] = parseInt(value);
                             }
                             else{
-                                oneOfinput.style.border = '2px solid red';
-                                oneOfinput.focus;
+                                Inputs_number.style.border = '2px solid red';
+                                Inputs_number.focus;
                             }
                             break;
                         }
-
-                        //     case 'age':{
-                        //     if(oneOfinput.value <=15){
-                        //         alert('Prenez contact avec votre médecin généraliste au moindre' +
-                        //             'doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins' +
-                        //             'de 15 ans. En cas d’urgence, appeler le 15.');
-                        //         symptomes={};
-                        //          window.location.href='index.html';
-                        //     }
-                        //     if(oneOfinput.value >=16 && oneOfinput.value <= 100){
-                        //         symptomes['age'] = oneOfinput.value;
-                        //     }
-                        //     break;
-                        // }
-                        // case 'poid':{
-                        //     symptomes['poid'] = oneOfinput.value;
-                        //     break;
-                        // }
-                        // case 'taille':{
-                        //     symptomes['taille'] = oneOfinput.value;
-                        //     break;
-                        // }
-                        //
-
-
                     }
                 }
                 else{
-                    oneOfinput.style.border = '2px solid red';
-                    oneOfinput.focus;
+                    Inputs_number.style.border = '2px solid red';
+                    Inputs_number.focus;
                 }
 
             })
 
-        })
         //symptomes
 
        function save_Value (saveKey){
@@ -587,19 +575,16 @@
                   symptomes['fievre1'] = true;
                   break;
               }
-
               case "oui3":{
                   symptomes['toux'] = true;
                   break;
               }
-
               case "oui4":{
                   symptomes['douleur'] = true;
                   break;
               }
               case "oui5":{
                   symptomes['mal_gorgr'] = true;
-                  // alert(symptomes['mal_gorgr'])
                   break;
               }
               case "oui6":{
@@ -607,48 +592,37 @@
                   break;
               }
               case "oui7":{
-                  symptomes['fatigue'] = true;
+                  mineur['fatigue'] = true;
                   break;
               }
               case "oui8":{
-                  symptomes['fatigue_moitie_jour'] = true;
+                  mineur['fatigue_moitie_jour'] = true;
                   break;
               }
               case "oui9":{
-                  symptomes['difuculte'] = true;
+                  majeur['difuculte'] = true;
                   break;
               }
               case "oui10":{
-                  symptomes['apparaitre'] = true;
+                  majeur['apparaitre'] = true;
 
                   break;
               }
-              // case "oui11":{
-              //     symptomes['sentinent'] = true;
-              //     break;
-              // }
-              // case "oui12":{
-              //     symptomes['champlibre'] = true;
-              //     console.log(symptomes);
-              //     break;
-              // }
              //bien AssezBien mal TresMal
               case "bien":{
-                  symptomes['senter'] = 'Bien';
+                  mineur['senter'] = 'Bien';
                   break;
               }
               case "AssezBien":{
-                  symptomes['senter'] = 'Assez Bien';
-
+                  mineur['senter'] = 'Assez Bien';
                   break;
               }
               case "mal":{
-                  symptomes['senter'] = 'Mal';
-
+                  mineur['senter'] = 'Mal';
                   break;
               }
               case "TresMal":{
-                  symptomes['senter'] = 'Très Mal';
+                  mineur['senter'] = 'Très Mal';
                   break;
               }
           }
@@ -663,12 +637,10 @@
                 }
                 case "non3":{
                     delete symptomes['toux'];
-
                     break;
                 }
                 case "non4":{
                     delete symptomes['douleur'];
-
                     break;
                 }
                 case "non5":{
@@ -678,56 +650,49 @@
                 }
                 case "non6":{
                     delete symptomes['diarrhe'];
-
                     break;
                 }
                 case "non7":{
-                    delete symptomes['fatigue'];
+                    delete mineur['fatigue'];
 
                     break;
                 }
-
                 case "non8":{
-                    delete symptomes['fatigue_moitie_jour'];//moitié de la journée
-
+                    delete mineur['fatigue_moitie_jour'];//moitié de la journée
                     break;
                 }
                 case "non9":{
-                    delete symptomes['difuculte'];
-
+                    delete majeur['difuculte'];
                     break;
                 }
                 case "non10":{
-                    delete symptomes['apparaitre'];
-
+                    delete majeur['apparaitre'];
                     break;
                 }
             }
        }
-    // class Fiever{
-    //     constructor(fiever , tempetature , toux , douleur ,mal_gorgr , diarrhe ,fatigue ,difuculte ,apparaitre ,sentinent , champlibre) {
-    //         this.fiever = fiever;
-    //         this.tempetature = tempetature;
-    //         this.toux = toux;
-    //         this.douleur = douleur;
-    //         this.mal_gorgr = mal_gorgr;
-    //         this.fatigue = fatigue;
-    //         this.difuculte = difuculte;
-    //         this.apparaitre = apparaitre;
-    //         this.sentinent = sentinent;
-    //         this.champlibre = champlibre;
-    //
-    //     }
-    // }
-
-
-    // suivant.addEventListener('click', (e) => {
-    //
-    //     const res_fiever = new Fiever(fiever.value, tempetature.value, toux.value, douleur.value ,mal_gorgr.value, diarrhe.value, fatigue.value, difuculte.value, apparaitre.value, sentinent.value, champlibre.value );
-    //
-    // })
 
 // end jamal
+// window.addEventListener("keydown", function (event) {
+        
+//         KEY=event.key.charCodeAt(0);
+ 
+//         if(KEY >=48 && KEY <= 57){
+//             KEY = String.fromCharCode(KEY);
+           
+//             Inputs_number.value += KEY;
+//             if(Inputs_number.value >42 || Inputs_number.value <30){
+//                 Inputs_number.style.border = '2px solid red';
+//             }
+            
+//             else{
+//                 Inputs_number.style.border = '1px solid grey';
+//             }
+//         }
+//         else if(KEY == 66){
+//             Inputs_number.value = Inputs_number.value.slice(0 , -1);
+//             }
+//     });
 </script>
 </body>
 
