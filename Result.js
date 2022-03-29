@@ -1,9 +1,13 @@
 let fgMaj, fp, fgMin, symptomes, message;
-//message pour tout
-msgAll = "";
-if (!symtomes) {
+let countSyNormal = Object.keys(symptomes).length;
+let countSyMaj = Object.keys(majeur).length;
+let countSyMin = Object.keys(mineur).length
+
+
+if (!countSyNormal) {
     message = "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute.Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation.Pour toute information concernant le Covid - 19 allez vers la page d’ accueil.";
-} else if (fgMaj)
+    console.log(message);
+} else if (countSyMaj)
     message = "Appel 141";
 else if (fp == true) {
     if (fgMin >= 2)
