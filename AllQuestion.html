@@ -546,8 +546,8 @@
                     case 'temperature':
                         {
                             delete symptomes['temperature']; //delete for not repeat
-                            delete majeur['temperature'];
-                            delete majeur['temperature'];
+                            delete majeur['temp_maj'];
+                            delete majeur['temp_min'];
 
                             if (value < 39 && value > 35) {
                                 symptomes['temperature'] = parseInt(value);
@@ -696,8 +696,6 @@
             }
         }
     </script>
-    <!-- <script src="Result.js">
-    </script> -->
 </body>
 
 </html>
