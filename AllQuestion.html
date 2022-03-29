@@ -432,16 +432,14 @@
                     </div>
                 </div>
                 <div class="container d-flex justify-content-between "><button type="button " class="btn border border-3 président mb-3" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="prev">précédent</button>
-                    <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button></div>
+                    <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button>
+                    <a href="result.html" class="termine d-none border-3  text-decoration-none mt-2" style="border-color: #1078AD 2px !important; color: #1078AD; ">TERMINE</a></div>
 
-                </button>
-                <button id="btnRes" onclick="res()">Terminer
-                   <a href="result.html"></a> </button>
             </div>
+
 
         </div>
     </div>
-
 
     <script src="./Include/footer.js"></script>
     <script src="Script.js"></script>
@@ -470,13 +468,69 @@
         const regNumber = new RegExp('^[0-9]+$');
         let boolSave = null;
         let saveKey = null; // save key or Id => input
+        let dis_suivant = document.querySelector(".suivant");
+        let termine = document.querySelector(".termine");
+        let president = document.querySelector(".président");
 
-        // for the  progres bar 
+        // for the  progres bar
         let value = 0;
         let nbr = 1;
         // suivante
-        document.querySelector(".suivant").addEventListener("click", () => {
+        dis_suivant.disabled = true;
+        president.disabled = true;
 
+        //   age 
+        age.addEventListener('blur', () => {
+            if (!regNumber.test(age.value) || age.value > 120 || age.value < 15 || age.value == '') {
+                age.style.border = '2px solid red';
+                age.focus;
+                dis_suivant.disabled = true;
+
+            } else {
+                age.style.border = '2px solid green';
+                age.focus;
+                dis_suivant.disabled = false;
+            }
+        })
+
+        // poid 
+        poid.addEventListener('blur', () => {
+            if (!regNumber.test(poid.value) || poid.value > 200 || poid.value < 30 || poid.value == '') {
+                poid.style.border = '2px solid red';
+                poid.focus;
+                dis_suivant.disabled = true;
+
+            } else {
+                poid.style.border = '2px solid green';
+                poid.focus;
+                dis_suivant.disabled = false;
+            }
+        })
+
+
+        //  taille
+        taille.addEventListener('blur', () => {
+            if (!regNumber.test(taille.value) || taille.value > 250 || taille.value < 80 || taille.value == '') {
+                taille.style.border = '2px solid red';
+                taille.focus;
+                dis_suivant.disabled = true;
+
+            } else {
+                taille.style.border = '2px solid green';
+                taille.focus;
+                dis_suivant.disabled = false;
+            }
+        })
+
+        dis_suivant.addEventListener("click", () => {
+                    president.disabled = false;
+                    if (nbr >= 22) {
+                        termine.classList.replace("d-none", "d-block");
+                        dis_suivant.classList.add("d-none");
+                    } else if (nbr < 22) {
+                        dis_suivant.classList.add("d-block");
+                        termine.classList.replace("d-none", "d-none");
+                    }
                     // click suivant jamal
                     if (boolSave === true) {
                         save_Value(saveKey);
@@ -488,6 +542,7 @@
                     console.log(symptomes);
                     console.log(majeur);
                     console.log(mineur);
+
                     if (value <= 100) {
                         value += (100 / 22);
                         nbr++;
@@ -499,16 +554,30 @@
                     }
                     boolSave = null; //jamal
                     saveKey = null; //jamal
+                    dis_suivant.disabled = true;
                 }
 
-            ) //     présidente
-        document.querySelector(".président").addEventListener("click", () => {
+            )
+            //     présidente
 
+
+        // -----------------------------------------------------------------------------------------------
+        //start jamal
+
+        president.addEventListener("click", () => {
+
+                    if (nbr < 23) {
+                        dis_suivant.classList.add("d-block");
+                    }
                     if (value <= 100) {
                         value -= (100 / 22);
                         nbr--;
+                        if (nbr === 1) {
+                            president.disabled = true;
+                        }
                         document.querySelector(".progress-bar").style.width = value + "%";
                         document.querySelector(".num_question").innerHTML = nbr + '/23';
+
                     } else {
                         value = 0;
                         document.querySelector(".progress-bar").style.width = value + "%";
@@ -521,6 +590,7 @@
             yes.addEventListener("click", function() {
                 boolSave = true;
                 saveKey = yes.id;
+                dis_suivant.disabled = false;
             })
         })
 
@@ -528,6 +598,7 @@
                 no.addEventListener("click", function() {
                     boolSave = false;
                     saveKey = no.id;
+                    dis_suivant.disabled = false;
                 })
             })
             // comment_vous_sentez_vous
@@ -535,27 +606,29 @@
             oneOfradio.addEventListener("click", function() {
                 boolSave = true;
                 saveKey = oneOfradio.id;
+                dis_suivant.disabled = false;
             })
-        })
+        });
         Inputs_number.addEventListener("blur", function() {
             // oneOfinput.value = new RegExp(regNumber);
             if (regNumber.test(Inputs_number.value)) {
+                dis_suivant.disabled = false;
                 let value = Inputs_number.value;
                 Inputs_number.style.border = '1px solid gray';
                 switch (Inputs_number.id) {
                     case 'temperature':
                         {
                             delete symptomes['temperature']; //delete for not repeat
-                            delete majeur['temp_maj'];
-                            delete majeur['temp_min'];
+                            delete majeur['temperature'];
+                            delete majeur['temperature'];
+                            if (value > 35 && value < 39) {
 
-                            if (value < 39 && value > 35) {
-                                symptomes['temperature'] = parseInt(value);
                             } else if (value <= 35 && value >= 30) {
                                 majeur['temperature'] = parseInt(value);
                             } else if (value >= 39 && value <= 42) {
                                 mineur['temperature'] = parseInt(value);
                             } else {
+                                dis_suivant.disabled = true;
                                 Inputs_number.style.border = '2px solid red';
                                 Inputs_number.focus;
                             }
@@ -563,6 +636,7 @@
                         }
                 }
             } else {
+                dis_suivant.disabled = true;
                 Inputs_number.style.border = '2px solid red';
                 Inputs_number.focus;
             }
@@ -616,18 +690,17 @@
                 case "oui10":
                     {
                         majeur['apparaitre'] = true;
-
                         break;
                     }
-                    //bien AssezBien mal TresMal
+                    // bien AssezBien mal TresMal
                 case "bien":
                     {
-                        mineur['senter'] = 'Bien';
+                        delete mineur['senter'];
                         break;
                     }
                 case "AssezBien":
                     {
-                        mineur['senter'] = 'Assez Bien';
+                        delete mineur['senter'];
                         break;
                     }
                 case "mal":
@@ -695,7 +768,33 @@
                     }
             }
         }
+
+        // end jamal
+        // window.addEventListener("keydown", function (event) {
+
+        //         KEY=event.key.charCodeAt(0);
+
+        //         if(KEY >=48 && KEY <= 57){
+        //             KEY = String.fromCharCode(KEY);
+
+        //             Inputs_number.value += KEY;
+        //             if(Inputs_number.value >42 || Inputs_number.value <30){
+        //                 Inputs_number.style.border = '2px solid red';
+        //             }
+
+        //             else{
+        //                 Inputs_number.style.border = '1px solid grey';
+        //             }
+        //         }
+        //         else if(KEY == 66){
+        //             Inputs_number.value = Inputs_number.value.slice(0 , -1);
+        //             }
+        //  
+        //   });
     </script>
+
+
+
 </body>
 
 </html>
