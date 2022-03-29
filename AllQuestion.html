@@ -575,7 +575,8 @@
                                 president.disabled = true;
                             }
                             document.querySelector(".progress-bar").style.width = value + "%";
-                            //  document.querySelector(".num_question").innerHTML = parseInt(nbr * 100 / 23) + "%";
+                            document.querySelector(".num_question").innerHTML = nbr + '/23';
+
                         } else {
                             value = 0;
                             document.querySelector(".progress-bar").style.width = value + "%";
