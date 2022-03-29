@@ -146,37 +146,89 @@ traitement_non.addEventListener('click', (e) => {
 let ReponseTrue = {}
 const suivant = document.querySelector('.suivant');
 suivant.addEventListener('click', (e) => {
-    var response1 = new Pronostique(age.value, poid.value, taille.value, hyper, diabetique, cancer, respiratoire, dyalise, foie, enseinte, immunitaire, traitement);
+        var response1 = new Pronostique(age.value, poid.value, taille.value, hyper, diabetique, cancer, respiratoire, dyalise, foie, enseinte, immunitaire, traitement);
 
-    console.log(' \n age : ' + response1.age + ' \n poid :' + response1.poid + '\n taille :' + response1.taille + '\n hypertention' + response1.hepertention + '\n diabetique :' + response1.diabetique + '\n cancer :' + response1.cancer + '\n respiratoire :' + response1.respiratoire + '\n dyalise :' + response1.dyalise + ' \n foie :' + response1.foie + ' \n enseint:' + response1.enseinte + ' \n immunitaire:' + response1.defenses_immunitaire + '\n traitement : ' + response1.traitement);
+        console.log(' \n age : ' + response1.age + ' \n poid :' + response1.poid + '\n taille :' + response1.taille + '\n hypertention' + response1.hepertention + '\n diabetique :' + response1.diabetique + '\n cancer :' + response1.cancer + '\n respiratoire :' + response1.respiratoire + '\n dyalise :' + response1.dyalise + ' \n foie :' + response1.foie + ' \n enseint:' + response1.enseinte + ' \n immunitaire:' + response1.defenses_immunitaire + '\n traitement : ' + response1.traitement);
 
-    if (hyper)
-        ReponseTrue['hypertention'] = true;
-    else
-        delete ReponseTrue['hypertention'];
-    if (diabetique) ReponseTrue['diabetique'] = true;
-    else delete ReponseTrue['diabetique'];
+        if (hyper)
+            ReponseTrue['hypertention'] = true;
+        else
+            delete ReponseTrue['hypertention'];
+        if (diabetique) ReponseTrue['diabetique'] = true;
+        else delete ReponseTrue['diabetique'];
 
-    if (cancer) ReponseTrue['cancer'] = true;
-    else delete ReponseTrue['cancer'];
+        if (cancer) ReponseTrue['cancer'] = true;
+        else delete ReponseTrue['cancer'];
 
-    if (respiratoire) ReponseTrue['respiratoire'] = true;
-    else delete ReponseTrue['respiratoire'];
+        if (respiratoire) ReponseTrue['respiratoire'] = true;
+        else delete ReponseTrue['respiratoire'];
 
-    if (dyalise) ReponseTrue['dyalise'] = true;
-    else delete ReponseTrue['dyalise'];
+        if (dyalise) ReponseTrue['dyalise'] = true;
+        else delete ReponseTrue['dyalise'];
 
-    if (foie) ReponseTrue['foie'] = true;
-    else delete ReponseTrue['foie'];
+        if (foie) ReponseTrue['foie'] = true;
+        else delete ReponseTrue['foie'];
 
-    if (enseinte) ReponseTrue['enseinte'] = true;
-    else delete ReponseTrue['enseinte'];
+        if (enseinte) ReponseTrue['enseinte'] = true;
+        else delete ReponseTrue['enseinte'];
 
-    if (immunitaire) ReponseTrue['immunitaire'] = true;
-    else delete ReponseTrue['immunitaire'];
+        if (immunitaire) ReponseTrue['immunitaire'] = true;
+        else delete ReponseTrue['immunitaire'];
 
-    if (traitement) ReponseTrue['traitement'] = true;
-    else delete ReponseTrue['traitement'];
+        if (traitement) ReponseTrue['traitement'] = true;
+        else delete ReponseTrue['traitement'];
 
-    console.log(ReponseTrue);
-})
+        console.log(ReponseTrue);
+    })
+    // const btnRes = document.getElementById("btnRes");
+    // btnRes.addEventListener("click", () => {
+let message;
+
+function res() {
+
+    let countSyNormal = Object.keys(symptomes).length;
+    let countSyMaj = Object.keys(majeur).length;
+    let countSyMin = Object.keys(mineur).length;
+    let CountfactPr = Object.keys(ReponseTrue).length;
+
+    // if (!countSyNormal) {
+    //     message = "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute.Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation.Pour toute information concernant le Covid - 19 allez vers la page d’ accueil.";
+    // } else if (countSyMaj) {
+    //     message = "Appel 141";
+    // } else
+    if (CountfactPr) {
+        if (countSyMin >= 2)
+            message = "appel 141";
+        else
+            message = "appelez le 141 si une gêne respiratoire ou des difficultésimportantes pour s’ alimenter ou boire pendant plusde 24 h apparaissent ";
+    } else if (!CountfactPr) {
+        if (!countSyMin && age < 50)
+            message = "nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’ apparition de nouveaux symptômes.Vous pourrez aussi utiliser à nouveau l’ application pour réévaluer vos symptômes.";
+        if (age >= 50 && age <= 69)
+            message = "appelez le 141 si une gêne respiratoire ou des difficultésimportantes pours’ alimenter ou boire pendant plus de 24 h apparaissent.";
+    }
+    if (mineur.hasOwnProperty("temperature") && symptomes.hasOwnProperty("toux")) {
+        if (!CountfactPr) {
+            if (countSyMin == true) {
+                message = "appelez le 141 si une gêne respiratoire ou des difficultésimportantes pour s’ alimenter ou boire pendant plusde 24 h apparaissent";
+            }
+        } else {
+            if (countSyMin <= 1)
+                message = "appelez le 141 si une gêne respiratoire ou des difficultésimportantes pour s’ alimenter ou boire pendant plusde 24 h apparaissent";
+            else
+                message = "appel 141";
+        }
+    } else if (symptomes.hasOwnProperty("toux") || symptomes.hasOwnProperty("gorge") || symptomes.hasOwnProperty("fatigue")) {
+        if (!countSyMin) {
+            message = "Votre situation ne relève probablement pas du Covid-19. Consultez votre médecin au moindre doute.";
+
+        } else {
+            if (countSyMin || CountfactPr) {
+                message = "Votre situation ne relève probablement pas du Covid-19. Un avis médical est recommandé.Au moindre doute, appelez le 141. ";
+
+            }
+        }
+    }
+    alert(message);
+    // document.querySelector('display').innerHTML = message;
+}
