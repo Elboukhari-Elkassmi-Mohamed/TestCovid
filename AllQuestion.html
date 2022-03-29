@@ -433,7 +433,7 @@
                 </div>
                 <div class="container d-flex justify-content-between "><button type="button " class="btn border border-3 président mb-3" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="prev">précédent</button>
                     <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button>
-                   <a href="result.html" class="termine d-none">TERMINE</a></div>
+                   <a href="result.html" class="termine d-none border-3  text-decoration-none mt-2" style="border-color: #1078AD 2px !important; color: #1078AD; ">TERMINE</a></div>
 
             </div>
         </div>
@@ -468,18 +468,20 @@
         let saveKey = null;// save key or Id => input
         let dis_suivant = document.querySelector(".suivant");
         let termine =  document.querySelector(".termine");
-        
+        let president = document.querySelector(".président");
+    
         // for the  progres bar
         let value = 0;
         let nbr = 1;
         // suivante
         dis_suivant.disabled = true;
+        president.disabled = true;
         dis_suivant.addEventListener("click", () => {
-                if(nbr >2){
-                    alert('true');
+            president.disabled = false;
+                if(nbr >=22){
                     termine.classList.replace("d-none","d-block");
                     dis_suivant.classList.add("d-none");
-                }else if(nbr == 2){
+                }else if(nbr < 22){
                     dis_suivant.classList.add("d-block");
                     termine.classList.replace("d-none","d-none");
                 }
@@ -509,16 +511,19 @@
                     }
 
                 ) //     présidente
-            document.querySelector(".président").addEventListener("click", () => {
+            president.addEventListener("click", () => {
+                
                 if(nbr <23){
                      dis_suivant.classList.add("d-block");
                 }
-               
                 if (value <= 100) {
                     value -= (100 / 22);
                     nbr--;
+                    if(nbr ===1){
+                    president.disabled = true;
+                }
                     document.querySelector(".progress-bar").style.width = value + "%";
-                    // document.querySelector(".num_question").innerHTML = parseInt(nbr * 100 / 23) + "%";
+                    //  document.querySelector(".num_question").innerHTML = parseInt(nbr * 100 / 23) + "%";
                 } else {
                     value = 0;
                     document.querySelector(".progress-bar").style.width = value + "%";
