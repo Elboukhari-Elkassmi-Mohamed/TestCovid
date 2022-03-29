@@ -244,7 +244,8 @@
 
                             <div class="input-group mb-3 ">
                                 <span class="input-group-text " id="basic-addon1 ">ans</span>
-                                <input type="number " id="age" class=" form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
+                                <input type="number " id="age" class=" form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1">
+
                             </div>
 
                         </div>
@@ -254,7 +255,7 @@
                             <h1 class="card-title text-secondary pb-5 "> 13-Quel est votre poids ? </h1>
                             <div class="input-group mb-3 ">
                                 <span class="input-group-text " id="basic-addon1 ">Kg</span>
-                                <input type="number " id="poid" class=" form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
+                                <input type="number " id="poid" class=" form-control poid " placeholder="30 200 " aria-label="Username " aria-describedby="basic-addon1 ">
                             </div>
 
                         </div>
@@ -463,10 +464,64 @@
             const Inputs_number = document.querySelector('.number_input');
             const senter = document.querySelectorAll('.senter');
             const regNumber = new RegExp('^[0-9]+$');
+            //  validation  
+
+            let dis_suivant = document.querySelector(".suivant");
+
+
+
+            //   age 
+            age.addEventListener('blur', () => {
+                if (!regNumber.test(age.value) || age.value > 120 || age.value < 15 || age.value == '') {
+                    age.style.border = '2px solid red';
+                    age.focus;
+                    dis_suivant.disabled = true;
+
+                } else {
+                    age.style.border = '2px solid green';
+                    age.focus;
+                    dis_suivant.disabled = false;
+                }
+            })
+
+            // poid 
+            poid.addEventListener('blur', () => {
+                if (!regNumber.test(poid.value) || poid.value > 200 || poid.value < 30 || poid.value == '') {
+                    poid.style.border = '2px solid red';
+                    poid.focus;
+                    dis_suivant.disabled = true;
+
+                } else {
+                    poid.style.border = '2px solid green';
+                    poid.focus;
+                    dis_suivant.disabled = false;
+                }
+            })
+
+
+            //  taille
+            taille.addEventListener('blur', () => {
+                if (!regNumber.test(taille.value) || taille.value > 250 || taille.value < 80 || taille.value == '') {
+                    taille.style.border = '2px solid red';
+                    taille.focus;
+                    dis_suivant.disabled = true;
+
+                } else {
+                    taille.style.border = '2px solid green';
+                    taille.focus;
+                    dis_suivant.disabled = false;
+                }
+            })
+
+
+
+
+
+            // -------------------------
             let boolSave = null;
             let saveKey = null; // save key or Id => input
 
-            // for the  progres bar 
+            // for the  progres bar---------------------------------------------------------------------
             let value = 0;
             let nbr = 1;
             // suivante
@@ -483,6 +538,7 @@
                         console.log(symptomes);
                         console.log(majeur);
                         console.log(mineur);
+
                         if (value <= 100) {
                             value += (100 / 22);
                             nbr++;
@@ -499,19 +555,21 @@
                 ) //     présidente
             document.querySelector(".président").addEventListener("click", () => {
 
-                        if (value <= 100) {
-                            value -= (100 / 22);
-                            nbr--;
-                            document.querySelector(".progress-bar").style.width = value + "%";
-                            document.querySelector(".num_question").innerHTML = nbr + '/23';
-                        } else {
-                            value = 0;
-                            document.querySelector(".progress-bar").style.width = value + "%";
-                        }
+                    if (value <= 100) {
+                        value -= (100 / 22);
+                        nbr--;
+                        document.querySelector(".progress-bar").style.width = value + "%";
+                        document.querySelector(".num_question").innerHTML = nbr + '/23';
+                    } else {
+                        value = 0;
+                        document.querySelector(".progress-bar").style.width = value + "%";
                     }
+                }
 
-                )
-                //start jamal
+            )
+
+            // -----------------------------------------------------------------------------------------------
+            //start jamal
             answer_yes.forEach(yes => {
                 yes.addEventListener("click", function() {
                     boolSave = true;
