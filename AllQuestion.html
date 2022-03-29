@@ -476,7 +476,7 @@
         // suivante
         dis_suivant.disabled = true;
         president.disabled = true;
-        dis_suivant.addEventListener("click", () => {
+        dis_suivant.addEventListener("click", () =>  {
             president.disabled = false;
                 if(nbr >=22){
                     termine.classList.replace("d-none","d-block");
@@ -515,8 +515,10 @@
                 
                 if(nbr <23){
                      dis_suivant.classList.add("d-block");
+                    termine.classList.replace("d-none","d-none");
+                
                 }
-                if (value <= 100) {
+                if(value <= 100) {
                     value -= (100 / 22);
                     nbr--;
                     if(nbr ===1){
