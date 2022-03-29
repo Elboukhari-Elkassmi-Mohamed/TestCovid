@@ -229,6 +229,6 @@ function res() {
             }
         }
     }
-    alert(message);
-    // document.querySelector('display').innerHTML = message;
+    // alert(message);
+    document.querySelector('display').innerHTML = message;
 }
