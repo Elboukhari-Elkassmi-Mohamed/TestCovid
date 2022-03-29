@@ -465,12 +465,14 @@
         const regNumber = new RegExp('^[0-9]+$');
         let boolSave = null;
         let saveKey = null;// save key or Id => input
+        let dis_suivant = document.querySelector(".suivant");
 
         // for the  progres bar 
         let value = 0;
         let nbr = 1;
         // suivante
-        document.querySelector(".suivant").addEventListener("click", () => {
+        dis_suivant.disabled = true;
+        dis_suivant.addEventListener("click", () => {
 
 // click suivant jamal
               if(boolSave === true){
@@ -494,6 +496,7 @@
                     }
                 boolSave = null;//jamal
                 saveKey = null;//jamal
+                dis_suivant.disabled = true;
                 }
 
             ) //     présidente
@@ -516,6 +519,7 @@
             yes.addEventListener("click" , function(){
                 boolSave = true;
                saveKey = yes.id;
+               dis_suivant.disabled = false;
             })
         })
 
@@ -523,6 +527,7 @@
             no.addEventListener("click" , function(){
                 boolSave = false;
                 saveKey = no.id;
+                dis_suivant.disabled = false;
             })
         })
         // comment_vous_sentez_vous
@@ -530,11 +535,13 @@
             oneOfradio.addEventListener("click" , function(){
                 boolSave = true;
                 saveKey = oneOfradio.id;
+                dis_suivant.disabled = false;
             })
         })
         Inputs_number.addEventListener("blur", function(){
                 // oneOfinput.value = new RegExp(regNumber);
                 if(regNumber.test(Inputs_number.value)){
+                    dis_suivant.disabled = false;
                     let value = Inputs_number.value;
                     Inputs_number.style.border = '1px solid gray';
                     switch (Inputs_number.id){
@@ -543,16 +550,14 @@
                             delete majeur['temp_majeur'];
                             delete majeur['temp_majeur'];
 
-                            if(value <39 && value > 35){
-                                symptomes['temperature'] = parseInt(value);
-                            }
-                            else if(value <= 35 && value >= 30){
+                             if(value <= 35 && value >= 30){
                                 majeur['temp_majeur'] = parseInt(value);
                             }
                             else if(value >= 39 && value <= 42){
                                 mineur['temp_mineur'] = parseInt(value);
                             }
                             else{
+                                dis_suivant.disabled = true;
                                 Inputs_number.style.border = '2px solid red';
                                 Inputs_number.focus;
                             }
@@ -561,6 +566,7 @@
                     }
                 }
                 else{
+                    dis_suivant.disabled = true;
                     Inputs_number.style.border = '2px solid red';
                     Inputs_number.focus;
                 }
@@ -592,7 +598,7 @@
                   break;
               }
               case "oui7":{
-                  mineur['fatigue'] = true;
+                symptomes['fatigue'] = true;
                   break;
               }
               case "oui8":{
@@ -605,16 +611,15 @@
               }
               case "oui10":{
                   majeur['apparaitre'] = true;
-
                   break;
               }
-             //bien AssezBien mal TresMal
+            // bien AssezBien mal TresMal
               case "bien":{
-                  mineur['senter'] = 'Bien';
+                  delete mineur['senter'];
                   break;
               }
               case "AssezBien":{
-                  mineur['senter'] = 'Assez Bien';
+                   delete mineur['senter'];
                   break;
               }
               case "mal":{
