@@ -432,7 +432,8 @@
                     </div>
                 </div>
                 <div class="container d-flex justify-content-between "><button type="button " class="btn border border-3 président mb-3" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="prev">précédent</button>
-                    <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button></div>
+                    <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button>
+                   <a href="result.html" class="termine d-none">TERMINE</a></div>
 
             </div>
         </div>
@@ -454,24 +455,34 @@
             const activeCircle = document.querySelector('.circle2');
             activeCircle.style.backgroundColor = '#F4CF1B';
 
-            //select all the inputs
-            let symptomes = {}; // objet
-            let majeur = {}; // objet
-            let mineur = {}; // objet
-            const answer_yes = document.querySelectorAll('.answYes');
-            const answer_no = document.querySelectorAll('.answNo');
-            const Inputs_number = document.querySelector('.number_input');
-            const senter = document.querySelectorAll('.senter');
-            const regNumber = new RegExp('^[0-9]+$');
-            let boolSave = null;
-            let saveKey = null; // save key or Id => input
-
-            // for the  progres bar 
-            let value = 0;
-            let nbr = 1;
-            // suivante
-            document.querySelector(".suivant").addEventListener("click", () => {
-
+        //select all the inputs
+        let symptomes ={};// objet
+        let majeur ={};// objet
+        let mineur ={};// objet
+        const answer_yes = document.querySelectorAll('.answYes');
+        const answer_no = document.querySelectorAll('.answNo');
+        const Inputs_number = document.querySelector('.number_input');
+        const senter = document.querySelectorAll('.senter');
+        const regNumber = new RegExp('^[0-9]+$');
+        let boolSave = null;
+        let saveKey = null;// save key or Id => input
+        let dis_suivant = document.querySelector(".suivant");
+        let termine =  document.querySelector(".termine");
+        
+        // for the  progres bar
+        let value = 0;
+        let nbr = 1;
+        // suivante
+        dis_suivant.disabled = true;
+        dis_suivant.addEventListener("click", () => {
+                if(nbr >2){
+                    alert('true');
+                    termine.classList.replace("d-none","d-block");
+                    dis_suivant.classList.add("d-none");
+                }else if(nbr == 2){
+                    dis_suivant.classList.add("d-block");
+                    termine.classList.replace("d-none","d-none");
+                }
                         // click suivant jamal
                         if (boolSave === true) {
                             save_Value(saveKey);
@@ -494,70 +505,83 @@
                         }
                         boolSave = null; //jamal
                         saveKey = null; //jamal
+                        dis_suivant.disabled = true;
                     }
 
                 ) //     présidente
             document.querySelector(".président").addEventListener("click", () => {
+                if(nbr <23){
+                     dis_suivant.classList.add("d-block");
+                }
+               
+                if (value <= 100) {
+                    value -= (100 / 22);
+                    nbr--;
+                    document.querySelector(".progress-bar").style.width = value + "%";
+                    // document.querySelector(".num_question").innerHTML = parseInt(nbr * 100 / 23) + "%";
+                } else {
+                    value = 0;
+                    document.querySelector(".progress-bar").style.width = value + "%";
+                }
+            }
 
-                        if (value <= 100) {
-                            value -= (100 / 22);
-                            nbr--;
-                            document.querySelector(".progress-bar").style.width = value + "%";
-                            document.querySelector(".num_question").innerHTML = nbr + '/23';
-                        } else {
-                            value = 0;
-                            document.querySelector(".progress-bar").style.width = value + "%";
-                        }
-                    }
-
-                )
-                //start jamal
-            answer_yes.forEach(yes => {
-                yes.addEventListener("click", function() {
-                    boolSave = true;
-                    saveKey = yes.id;
-                })
+        )
+//start jamal
+        answer_yes.forEach(yes => {
+            yes.addEventListener("click" , function(){
+                boolSave = true;
+               saveKey = yes.id;
+               dis_suivant.disabled = false;
             })
+        })
 
-            answer_no.forEach(no => {
-                    no.addEventListener("click", function() {
-                        boolSave = false;
-                        saveKey = no.id;
-                    })
-                })
-                // comment_vous_sentez_vous
-            senter.forEach(oneOfradio => {
-                oneOfradio.addEventListener("click", function() {
-                    boolSave = true;
-                    saveKey = oneOfradio.id;
-                })
+        answer_no.forEach(no => {
+            no.addEventListener("click" , function(){
+                boolSave = false;
+                saveKey = no.id;
+                dis_suivant.disabled = false;
             })
-            Inputs_number.addEventListener("blur", function() {
+        })
+        // comment_vous_sentez_vous
+        senter.forEach(oneOfradio => {
+            oneOfradio.addEventListener("click" , function(){
+                boolSave = true;
+                saveKey = oneOfradio.id;
+                dis_suivant.disabled = false;
+            })
+        })
+        Inputs_number.addEventListener("blur", function(){
                 // oneOfinput.value = new RegExp(regNumber);
-                if (regNumber.test(Inputs_number.value)) {
+                if(regNumber.test(Inputs_number.value)){
+                    dis_suivant.disabled = false;
                     let value = Inputs_number.value;
                     Inputs_number.style.border = '1px solid gray';
-                    switch (Inputs_number.id) {
-                        case 'temperature':
-                            {
-                                delete symptomes['temperature']; //delete for not repeat
-                                delete majeur['temperature'];
-                                delete majeur['temperature'];
-
-                                if (value < 39 && value > 35) {
-                                    symptomes['temperature'] = parseInt(value);
-                                } else if (value <= 35 && value >= 30) {
-                                    majeur['temperature'] = parseInt(value);
-                                } else if (value >= 39 && value <= 42) {
-                                    mineur['temperature'] = parseInt(value);
-                                } else {
-                                    Inputs_number.style.border = '2px solid red';
-                                    Inputs_number.focus;
-                                }
-                                break;
+                    switch (Inputs_number.id){
+                        case 'temperature':{
+                            delete symptomes['temperature'];//delete for not repeat
+                            delete majeur['temp_majeur'];
+                            delete majeur['temp_majeur'];
+                             if(value >35 && value <39){
+                                 
+                             }
+                            else if(value <= 35 && value >= 30){
+                                majeur['temp_majeur'] = parseInt(value);
                             }
+                            else if(value >= 39 && value <= 42){
+                                mineur['temp_mineur'] = parseInt(value);
+                            }
+                           
+                            else{
+                                dis_suivant.disabled = true;
+                                Inputs_number.style.border = '2px solid red';
+                                Inputs_number.focus;
+                            }
+                            break;
+                        }
                     }
-                } else {
+                }
+                else{
+                    dis_suivant.disabled = true;
                     Inputs_number.style.border = '2px solid red';
                     Inputs_number.focus;
                 }
@@ -566,76 +590,62 @@
 
             //symptomes
 
-            function save_Value(saveKey) {
-                switch (saveKey) {
-                    case "oui2":
-                        {
-                            symptomes['fievre1'] = true;
-                            break;
-                        }
-                    case "oui3":
-                        {
-                            symptomes['toux'] = true;
-                            break;
-                        }
-                    case "oui4":
-                        {
-                            symptomes['douleur'] = true;
-                            break;
-                        }
-                    case "oui5":
-                        {
-                            symptomes['mal_gorgr'] = true;
-                            break;
-                        }
-                    case "oui6":
-                        {
-                            symptomes['diarrhe'] = true;
-                            break;
-                        }
-                    case "oui7":
-                        {
-                            symptomes['fatigue'] = true;
-                            break;
-                        }
-                    case "oui8":
-                        {
-                            mineur['fatigue_moitie_jour'] = true;
-                            break;
-                        }
-                    case "oui9":
-                        {
-                            majeur['difuculte'] = true;
-                            break;
-                        }
-                    case "oui10":
-                        {
-                            majeur['apparaitre'] = true;
-
-                            break;
-                        }
-                        //bien AssezBien mal TresMal
-                    case "bien":
-                        {
-                            mineur['senter'] = 'Bien';
-                            break;
-                        }
-                    case "AssezBien":
-                        {
-                            mineur['senter'] = 'Assez Bien';
-                            break;
-                        }
-                    case "mal":
-                        {
-                            mineur['senter'] = 'Mal';
-                            break;
-                        }
-                    case "TresMal":
-                        {
-                            mineur['senter'] = 'Très Mal';
-                            break;
-                        }
-                }
+       function save_Value (saveKey){
+          switch(saveKey){
+              case "oui2":{
+                  symptomes['fievre1'] = true;
+                  break;
+              }
+              case "oui3":{
+                  symptomes['toux'] = true;
+                  break;
+              }
+              case "oui4":{
+                  symptomes['douleur'] = true;
+                  break;
+              }
+              case "oui5":{
+                  symptomes['mal_gorgr'] = true;
+                  break;
+              }
+              case "oui6":{
+                  symptomes['diarrhe'] = true;
+                  break;
+              }
+              case "oui7":{
+                symptomes['fatigue'] = true;
+                  break;
+              }
+              case "oui8":{
+                  mineur['fatigue_moitie_jour'] = true;
+                  break;
+              }
+              case "oui9":{
+                  majeur['difuculte'] = true;
+                  break;
+              }
+              case "oui10":{
+                  majeur['apparaitre'] = true;
+                  break;
+              }
+            // bien AssezBien mal TresMal
+              case "bien":{
+                  delete mineur['senter'];
+                  break;
+              }
+              case "AssezBien":{
+                   delete mineur['senter'];
+                  break;
+              }
+              case "mal":{
+                  mineur['senter'] = 'Mal';
+                  break;
+              }
+              case "TresMal":{
+                  mineur['senter'] = 'Très Mal';
+                  break;
+              }
+          }
 
             }
 
