@@ -618,14 +618,14 @@
                         case 'temperature':
                             {
                                 delete symptomes['temperature']; //delete for not repeat
-                                delete majeur['temp_majeur'];
-                                delete majeur['temp_majeur'];
+                                delete majeur['temperature'];
+                                delete majeur['temperature'];
                                 if (value > 35 && value < 39) {
 
                                 } else if (value <= 35 && value >= 30) {
-                                    majeur['temp_majeur'] = parseInt(value);
+                                    majeur['temperature'] = parseInt(value);
                                 } else if (value >= 39 && value <= 42) {
-                                    mineur['temp_mineur'] = parseInt(value);
+                                    mineur['temperature'] = parseInt(value);
                                 } else {
                                     dis_suivant.disabled = true;
                                     Inputs_number.style.border = '2px solid red';
@@ -788,7 +788,8 @@
             //         else if(KEY == 66){
             //             Inputs_number.value = Inputs_number.value.slice(0 , -1);
             //             }
-            //     });
+            //  
+        //   });
         </script>
         <script src="Result.js"></script>
 </body>
