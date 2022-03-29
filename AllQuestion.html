@@ -541,15 +541,15 @@
                         case 'temperature':
                             {
                                 delete symptomes['temperature']; //delete for not repeat
-                                delete majeur['temp_majeur'];
-                                delete majeur['temp_majeur'];
+                                delete majeur['temperature'];
+                                delete majeur['temperature'];
 
                                 if (value < 39 && value > 35) {
                                     symptomes['temperature'] = parseInt(value);
                                 } else if (value <= 35 && value >= 30) {
-                                    majeur['temp_majeur'] = parseInt(value);
+                                    majeur['temperature'] = parseInt(value);
                                 } else if (value >= 39 && value <= 42) {
-                                    mineur['temp_mineur'] = parseInt(value);
+                                    mineur['temperature'] = parseInt(value);
                                 } else {
                                     Inputs_number.style.border = '2px solid red';
                                     Inputs_number.focus;
@@ -595,7 +595,7 @@
                         }
                     case "oui7":
                         {
-                            mineur['fatigue'] = true;
+                            symptomes['fatigue'] = true;
                             break;
                         }
                     case "oui8":
@@ -713,6 +713,7 @@
             //             }
             //     });
         </script>
+        <script src="Result.js"></script>
 </body>
 
 </html>
