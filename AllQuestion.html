@@ -24,11 +24,10 @@
 <body>
 
     <script src="./Include/nav.js"></script>
-    <div>    
+    <div>
         <script src="./Include/stepper.js"></script>
-        
-      </div>
-      
+    </div>
+
     <br>
     <br>
 
@@ -43,416 +42,418 @@
                 </div>
                 <span class="fw-bolder num_question">1/23</span>
             </div>
-            <div id="carouselExampleControls" data-bs-interval="false" class="carousel slide h-75 " data-bs-touch="false">
-                <div class="carousel-inner card-body ">
-                    <!-- question 1 -->
-                    <div class="carousel-item  active ">
-                        <h1 class="qu_fievre card-title text-secondary pb-5">1-Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class=" answNo btn-check answerNo fievre_non_existe" name="options-outlined" id="non2">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non2" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+            <div id="carouselExampleControls" class="carousel slide h-75" data-bs-interval="false" data-bs-touch="false">
+
+                <div id="carouselExampleControls" data-bs-interval="false" class="carousel slide h-75 " data-bs-touch="false">
+                    <div class="carousel-inner card-body ">
+                        <!-- question 1 -->
+                        <div class="carousel-item  active ">
+                            <h1 class="qu_fievre card-title text-secondary pb-5">1-Pensez-vous avoir eu de la fièvre ces derniers jours (frissons, sueurs) ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class=" answNo btn-check answerNo fievre_non_existe" name="options-outlined" id="non2">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non2" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class=" answYes btn-check answerNo fievre_existe" name="options-outlined" id="oui2">
-                            <label class="btn fw-bold btn-outline-primary" for="oui2" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class=" answYes btn-check answerNo fievre_existe" name="options-outlined" id="oui2">
+                                <label class="btn fw-bold btn-outline-primary" for="oui2" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- QUESTION 2 -->
-                    <div class="carousel-item ">
+                        <!-- QUESTION 2 -->
+                        <div class="carousel-item ">
 
-                        <h1 class="   card-title text-secondary pb-5 ">2-quelle est votre température ?</h1>
+                            <h1 class="   card-title text-secondary pb-5 ">2-quelle est votre température ?</h1>
 
-                        <div class="input-group mb-3 ">
+                            <div class="input-group mb-3 ">
 
-                            <span class="input-group-text " id="basic-addon1 ">Température</span>
-                            <input type="number " class="number_input form-control " id="temperature" placeholder="35 " aria-label="Username " aria-describedby="basic-addon1 ">
+                                <span class="input-group-text " id="basic-addon1 ">Température</span>
+                                <input type="number " class="number_input form-control " id="temperature" placeholder="35 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            </div>
                         </div>
-                    </div>
-                    <!-- question 3 -->
-                    <div class="carousel-item ">
-                        <h1 class="qu_toux card-title text-secondary pb-5 "> 3-Avez-vous une toux ou une augmentation de votre toux habituelle ces derniers jours ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non3">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non3" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 3 -->
+                        <div class="carousel-item ">
+                            <h1 class="qu_toux card-title text-secondary pb-5 "> 3-Avez-vous une toux ou une augmentation de votre toux habituelle ces derniers jours ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non3">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non3" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui3">
-                            <label class="btn fw-bold btn-outline-primary" for="oui3" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui3">
+                                <label class="btn fw-bold btn-outline-primary" for="oui3" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- question4 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 ">4-Avez-vous des douleurs musculaires ou des courbatures inhabituelles ces derniers jours ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non4">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non4" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question4 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 ">4-Avez-vous des douleurs musculaires ou des courbatures inhabituelles ces derniers jours ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non4">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non4" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui4">
-                            <label class="btn fw-bold btn-outline-primary" for="oui4" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui4">
+                                <label class="btn fw-bold btn-outline-primary" for="oui4" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
                         </div>
-                    </div>
-                    <!-- question 5 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 ">5- Avez-vous un mal de gorge apparu ces derniers jours ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non5">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non5" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 5 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 ">5- Avez-vous un mal de gorge apparu ces derniers jours ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non5">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non5" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui5">
-                            <label class="btn fw-bold btn-outline-primary" for="oui5" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui5">
+                                <label class="btn fw-bold btn-outline-primary" for="oui5" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- question 6 -->
+                        <!-- question 6 -->
 
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 6-Avez-vous de la diarrhée ces dernières 24 heures(au moins 3 selles molles) ? </h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non6">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non6" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 6-Avez-vous de la diarrhée ces dernières 24 heures(au moins 3 selles molles) ? </h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non6">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non6" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui6">
-                            <label class="btn fw-bold btn-outline-primary" for="oui6" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui6">
+                                <label class="btn fw-bold btn-outline-primary" for="oui6" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- question 7  -->
+                        <!-- question 7  -->
 
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 7-Avez-vous une fatigue inhabituelle ces derniers jours ? </h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non7">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non7" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 7-Avez-vous une fatigue inhabituelle ces derniers jours ? </h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non7">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non7" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui7">
-                            <label class="btn fw-bold btn-outline-primary" for="oui7" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui7">
+                                <label class="btn fw-bold btn-outline-primary" for="oui7" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
+
                         </div>
 
-                    </div>
-
-                    <!-- question 8 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 8-cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ? </h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non8">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non8" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 8 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 8-cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ? </h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non8">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non8" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui8">
-                            <label class="btn fw-bold btn-outline-primary" for="oui8" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui8">
+                                <label class="btn fw-bold btn-outline-primary" for="oui8" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- question 9 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 9-Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ? </h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non9">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non9" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 9 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 9-Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ? </h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non9">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non9" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui9">
-                            <label class="btn fw-bold btn-outline-primary" for="oui9" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui9">
+                                <label class="btn fw-bold btn-outline-primary" for="oui9" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- question10 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 ">10- Avez-vous vu apparaître une gêne respiratoire ou une augmentation de votre gêne respiratoire habituelle ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non10">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non10" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question10 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 ">10- Avez-vous vu apparaître une gêne respiratoire ou une augmentation de votre gêne respiratoire habituelle ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="answNo btn-check answerNo" name="options-outlined" id="non10">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non10" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui10">
-                            <label class="btn fw-bold btn-outline-primary" for="oui10" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="answYes btn-check answerNo" name="options-outlined" id="oui10">
+                                <label class="btn fw-bold btn-outline-primary" for="oui10" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
+
                         </div>
 
-                    </div>
+                        <!-- question 11 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 11-Comment vous sentez-vous ?</h1>
+                            <div class="container d-flex justify-content-center pb-5 ">
 
-                    <!-- question 11 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 11-Comment vous sentez-vous ?</h1>
-                        <div class="container d-flex justify-content-center pb-5 ">
-
-                            <input type="radio" class="senter ? btn-check answerNo" name="options-outlined" id="bien">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="bien" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
+                                <input type="radio" class="senter ? btn-check answerNo" name="options-outlined" id="bien">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="bien" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-sunglasses "></i>
                                     <br> Bien
                             </label>
-                            <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="AssezBien">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="AssezBien" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
+                                <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="AssezBien">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="AssezBien" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-smile "></i>
                                     <br> Assez bien
                             </label>
 
-                            <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="mal">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="mal" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
+                                <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="mal">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="mal" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-frown "></i>
                                     <br> mal
                             </label>
-                            <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="TresMal">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="TresMal" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
+                                <input type="radio" class="senter btn-check answerNo" name="options-outlined" id="TresMal">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="TresMal" id="lblnon" style=" color:#1078AD;  width:90px; height: 80px; border-color: #1078AD;">
                                 <i class="bi bi-emoji-dizzy "></i>
                                     <br> très mal
                             </label>
 
 
 
+                            </div>
+
                         </div>
 
-                    </div>
+                        <!-- question 12 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 ">12- Quel est votre âge ?
+                            </h1>
 
-                    <!-- question 12 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 ">12- Quel est votre âge ?
-                        </h1>
+                            <div class="input-group mb-3 ">
+                                <span class="input-group-text " id="basic-addon1 ">ans</span>
+                                <input type="number " id="age" class=" form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            </div>
 
-                        <div class="input-group mb-3 ">
-                            <span class="input-group-text " id="basic-addon1 ">ans</span>
-                            <input type="number " id="age" class=" form-control  age " placeholder="25 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
-                    </div>
+                        <!-- question 13 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 13-Quel est votre poids ? </h1>
+                            <div class="input-group mb-3 ">
+                                <span class="input-group-text " id="basic-addon1 ">Kg</span>
+                                <input type="number " id="poid" class=" form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            </div>
 
-                    <!-- question 13 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 13-Quel est votre poids ? </h1>
-                        <div class="input-group mb-3 ">
-                            <span class="input-group-text " id="basic-addon1 ">Kg</span>
-                            <input type="number " id="poid" class=" form-control poid " placeholder="70 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
-                    </div>
 
+                        <!-- question 14 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 ">14-Quelle est votre taille ? </h1>
+                            <div class="input-group mb-3 ">
+                                <span class="input-group-text " id="basic-addon1 ">Cm</span>
+                                <input type="number " id="taille" class=" form-control taille" placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
+                            </div>
 
-                    <!-- question 14 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 ">14-Quelle est votre taille ? </h1>
-                        <div class="input-group mb-3 ">
-                            <span class="input-group-text " id="basic-addon1 ">Cm</span>
-                            <input type="number " id="taille" class=" form-control taille" placeholder="80-250 " aria-label="Username " aria-describedby="basic-addon1 ">
                         </div>
 
-                    </div>
 
-
-                    <!-- question 15 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 15-Avez-vous de l’hypertension artérielle ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ? </h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo hypertension_non " name="options-outlined" id="non15">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non15" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 15 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 15-Avez-vous de l’hypertension artérielle ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ? </h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo  hypertension_non " name="options-outlined" id="non15">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non15" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo hypertension_oui" name="options-outlined" id="oui15">
-                            <label class="btn fw-bold btn-outline-primary" for="oui15" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="btn-check answerNo hypertension_oui" name="options-outlined" id="oui15">
+                                <label class="btn fw-bold btn-outline-primary" for="oui15" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
-                        </div>
-
-                    </div>
-
-
-                    <!-- question 16 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 16-Êtes-vous diabétique ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non16">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non16" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
-                                <i class=" bi bi-x fw-5 "></i>
-                                <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui16">
-                            <label class="btn fw-bold btn-outline-primary" for="oui16" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
-                                <i class=" bi bi-check "></i>
-                                <br> Oui</label>
-
-                        </div>
-
-                    </div>
-
-                    <!-- question 17 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 16-Avez-vous ou avez-vous eu un cancer?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non17">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non17" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
-                                <i class=" bi bi-x fw-5 "></i>
-                                <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui17">
-                            <label class="btn fw-bold btn-outline-primary" for="oui17" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
-                                <i class=" bi bi-check "></i>
-                                <br> Oui</label>
+                            </div>
 
                         </div>
 
 
-                    </div>
-
-                    <!-- question 18 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 18-Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non18">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non18" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 16 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 16-Êtes-vous diabétique ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo diabetique_non" name="options-outlined" id="non16">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non16" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui18">
-                            <label class="btn fw-bold btn-outline-primary" for="oui18" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="btn-check answerNo diabetique_oui" name="options-outlined" id="oui16">
+                                <label class="btn fw-bold btn-outline-primary" for="oui16" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
-                        </div>
-                    </div>
-
-                    <!-- question 19 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 19-Avez-vous une insuffisance rénale chronique dialysée ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non19">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non19" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
-                                <i class=" bi bi-x fw-5 "></i>
-                                <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui19">
-                            <label class="btn fw-bold btn-outline-primary" for="oui19" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
-                                <i class=" bi bi-check "></i>
-                                <br> Oui</label>
+                            </div>
 
                         </div>
 
-                    </div>
-
-                    <!-- question 20 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 ">20- Avez-vous une maladie chronique du foie ?</h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non20">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non20" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 17 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 17-Avez-vous ou avez-vous eu un cancer?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo" name="options-outlined" id="non17">
+                                <label class="btn fw-bold me-5 btn-outline-primary cancer_non" for="non17" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui20">
-                            <label class="btn fw-bold btn-outline-primary" for="oui20" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="btn-check answerNo cancer_oui" name="options-outlined" id="oui17">
+                                <label class="btn fw-bold btn-outline-primary" for="oui17" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
+
+                            </div>
+
 
                         </div>
 
-                    </div>
-
-                    <!-- question 21 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 21-Êtes-vous enceinte ? </h1>
-
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non21">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non21" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 18 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 18-Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo  respiratoire_non" name="options-outlined" id="non18">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non18" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui21">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="oui21" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="btn-check answerNo respiratoire_oui" name="options-outlined" id="oui18">
+                                <label class="btn fw-bold btn-outline-primary" for="oui18" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="Homme">
-                            <label class="btn fw-bold btn-outline-primary" for="Homme" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+
+                            </div>
+                        </div>
+
+                        <!-- question 19 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 19-Avez-vous une insuffisance rénale chronique dialysée ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo dyalise_non" name="options-outlined" id="non19">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non19" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <i class=" bi bi-x fw-5 "></i>
+                                <br> Non</label>
+                                <input type="radio" class="btn-check answerNo dyalise_oui" name="options-outlined" id="oui19">
+                                <label class="btn fw-bold btn-outline-primary" for="oui19" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <i class=" bi bi-check "></i>
+                                <br> Oui</label>
+
+                            </div>
+
+                        </div>
+
+                        <!-- question 20 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 ">20- Avez-vous une maladie chronique du foie ?</h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo" name="options-outlined" id="non20">
+                                <label class="btn fw-bold me-5 btn-outline-primary foie_non" for="non20" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <i class=" bi bi-x fw-5 "></i>
+                                <br> Non</label>
+                                <input type="radio" class="btn-check answerNo foie_oui" name="options-outlined" id="oui20">
+                                <label class="btn fw-bold btn-outline-primary" for="oui20" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <i class=" bi bi-check "></i>
+                                <br> Oui</label>
+
+                            </div>
+
+                        </div>
+
+                        <!-- question 21 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 21-Êtes-vous enceinte ? </h1>
+
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo" name="options-outlined" id="non21">
+                                <label class="btn fw-bold me-5 btn-outline-primary non_enceinte" for="non21" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <i class=" bi bi-x fw-5 "></i>
+                                <br> Non</label>
+                                <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui21">
+                                <label class="btn fw-bold me-5 btn-outline-primary oui_enceinte" for="oui21" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <i class=" bi bi-check "></i>
+                                <br> Oui</label>
+                                <input type="radio" class="btn-check answerNo Homme" name="options-outlined" id="Homme">
+                                <label class="btn fw-bold btn-outline-primary" for="Homme" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class="bi bi-person-circle "></i>
                                     <br> Homme</label>
+                            </div>
                         </div>
-                    </div>
-                    <!-- question 22 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 "> 22-Avez-vous une maladie connue pour diminuer vos défenses immunitaires? </h1>
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non22">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non22" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                        <!-- question 22 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 "> 22-Avez-vous une maladie connue pour diminuer vos défenses immunitaires? </h1>
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo" name="options-outlined" id="non22">
+                                <label class="btn fw-bold me-5 btn-outline-primary immunitaires_non" for="non22" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="oui22">
-                            <label class="btn fw-bold btn-outline-primary" for="oui22" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="btn-check answerNo immunitaires_oui" name="options-outlined" id="oui22">
+                                <label class="btn fw-bold btn-outline-primary" for="oui22" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
+
                         </div>
+                        <!-- question 23 -->
+                        <div class="carousel-item ">
+                            <h1 class="card-title text-secondary pb-5 ">23- Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. (liste non exhaustive).
+                            </h1>
 
-                    </div>
-                    <!-- question 23 -->
-                    <div class="carousel-item ">
-                        <h1 class="card-title text-secondary pb-5 ">23- Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. Voici quelques exemples : corticoïdes, méthotrexate, ciclosporine, tacrolimus, azathioprine, cyclophosphamide
-                            (liste non exhaustive).
-                        </h1>
-
-                        <div class="container  d-flex justify-content-center pb-5">
-                            <input type="radio" class="btn-check answerNo" name="options-outlined" id="non23">
-                            <label class="btn fw-bold me-5 btn-outline-primary" for="non23" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                            <div class="container  d-flex justify-content-center pb-5">
+                                <input type="radio" class="btn-check answerNo traitement_non" name="options-outlined" id="non23">
+                                <label class="btn fw-bold me-5 btn-outline-primary" for="non23" id="lblnon" style=" color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-x fw-5 "></i>
                                 <br> Non</label>
-                            <input type="radio" class="btn-check answerNo " name="options-outlined" id="oui23">
-                            <label class="btn fw-bold btn-outline-primary" for="oui23" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
+                                <input type="radio" class="btn-check answerNo  traitement_oui" name="options-outlined" id="oui23">
+                                <label class="btn fw-bold btn-outline-primary" for="oui23" id="lbloui" style="  color:#1078AD;  width:90px; height: 70px; border-color: #1078AD;">
                                 <i class=" bi bi-check "></i>
                                 <br> Oui</label>
 
+                            </div>
+
+
                         </div>
 
-
                     </div>
-
                 </div>
+                <div class="container d-flex justify-content-between "><button type="button " class="btn border border-3 président mb-3" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="prev">précédent</button>
+                    <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button>
+                   <a href="result.html" class="termine d-none">TERMINE</a></div>
+
             </div>
-            <div class="container d-flex justify-content-between "><button type="button " class="btn border border-3 président mb-3" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="prev">précédent</button>
-                <button type="button " class="btn border border-3 suivante mb-3 suivant" style="border-color: #1078AD !important; color: #1078AD; " data-bs-target="#carouselExampleControls" data-bs-slide="next">suivante</button></div>
-
         </div>
-    </div>
 
 
-    <script src="./Include/footer.js"></script>
-    <script src="Script.js"></script>
+        <script src="./Include/footer.js"></script>
+        <script src="Script.js"></script>
 
 
 
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
 
-    <script>
-        //stepper
-        const allCircle = document.querySelector('.circle');
-        allCircle.style.backgroundColor = '#1078AD';
-        const activeCircle = document.querySelector('.circle2');
-        activeCircle.style.backgroundColor = '#F4CF1B';
+        <script>
+            //stepper
+            const allCircle = document.querySelector('.circle');
+            allCircle.style.backgroundColor = '#1078AD';
+            const activeCircle = document.querySelector('.circle2');
+            activeCircle.style.backgroundColor = '#F4CF1B';
 
         //select all the inputs
         let symptomes ={};// objet
@@ -466,42 +467,53 @@
         let boolSave = null;
         let saveKey = null;// save key or Id => input
         let dis_suivant = document.querySelector(".suivant");
-
-        // for the  progres bar 
+        let termine =  document.querySelector(".termine");
+        
+        // for the  progres bar
         let value = 0;
         let nbr = 1;
         // suivante
         dis_suivant.disabled = true;
         dis_suivant.addEventListener("click", () => {
-
-// click suivant jamal
-              if(boolSave === true){
-                  save_Value(saveKey);
-              }
-            if(boolSave === false){
-                delete_Value(saveKey);
-            }
-// end click jamal
-                console.log(symptomes);
-                console.log(majeur);
-                console.log(mineur);
-                    if (value <= 100) {
-                        value += (100 / 22);
-                        nbr++;
-                        document.querySelector(".progress-bar").style.width = value + "%";
-                        // document.querySelector(".num_question").innerHTML = parseInt(nbr * 100 / 23) + "%";
-                    } else {
-                        value = 0;
-                        document.querySelector(".progress-bar").style.width = value + "%";
-                    }
-                boolSave = null;//jamal
-                saveKey = null;//jamal
-                dis_suivant.disabled = true;
+                if(nbr >2){
+                    alert('true');
+                    termine.classList.replace("d-none","d-block");
+                    dis_suivant.classList.add("d-none");
+                }else if(nbr == 2){
+                    dis_suivant.classList.add("d-block");
+                    termine.classList.replace("d-none","d-none");
                 }
+                        // click suivant jamal
+                        if (boolSave === true) {
+                            save_Value(saveKey);
+                        }
+                        if (boolSave === false) {
+                            delete_Value(saveKey);
+                        }
+                        // end click jamal
+                        console.log(symptomes);
+                        console.log(majeur);
+                        console.log(mineur);
+                        if (value <= 100) {
+                            value += (100 / 22);
+                            nbr++;
+                            document.querySelector(".progress-bar").style.width = value + "%";
+                            document.querySelector(".num_question").innerHTML = nbr + '/23';
+                        } else {
+                            value = 0;
+                            document.querySelector(".progress-bar").style.width = value + "%";
+                        }
+                        boolSave = null; //jamal
+                        saveKey = null; //jamal
+                        dis_suivant.disabled = true;
+                    }
 
-            ) //     présidente
-        document.querySelector(".président").addEventListener("click", () => {
-
+                ) //     présidente
+            document.querySelector(".président").addEventListener("click", () => {
+                if(nbr <23){
+                     dis_suivant.classList.add("d-block");
+                }
+               
                 if (value <= 100) {
                     value -= (100 / 22);
                     nbr--;
@@ -549,13 +561,16 @@
                             delete symptomes['temperature'];//delete for not repeat
                             delete majeur['temp_majeur'];
                             delete majeur['temp_majeur'];
-
-                             if(value <= 35 && value >= 30){
+                             if(value >35 && value <39){
+                                 
+                             }
+                            else if(value <= 35 && value >= 30){
                                 majeur['temp_majeur'] = parseInt(value);
                             }
                             else if(value >= 39 && value <= 42){
                                 mineur['temp_mineur'] = parseInt(value);
                             }
+                           
                             else{
                                 dis_suivant.disabled = true;
                                 Inputs_number.style.border = '2px solid red';
@@ -573,7 +588,7 @@
 
             })
 
-        //symptomes
+            //symptomes
 
        function save_Value (saveKey){
           switch(saveKey){
@@ -632,73 +647,83 @@
               }
           }
 
-       }
+            }
 
-       function delete_Value(saveKey){
-            switch (saveKey){
-                case "non2":{
-                    delete symptomes['fievre1'];
-                    break;
-                }
-                case "non3":{
-                    delete symptomes['toux'];
-                    break;
-                }
-                case "non4":{
-                    delete symptomes['douleur'];
-                    break;
-                }
-                case "non5":{
-                    delete symptomes['mal_gorgr'];
+            function delete_Value(saveKey) {
+                switch (saveKey) {
+                    case "non2":
+                        {
+                            delete symptomes['fievre1'];
+                            break;
+                        }
+                    case "non3":
+                        {
+                            delete symptomes['toux'];
+                            break;
+                        }
+                    case "non4":
+                        {
+                            delete symptomes['douleur'];
+                            break;
+                        }
+                    case "non5":
+                        {
+                            delete symptomes['mal_gorgr'];
 
-                    break;
-                }
-                case "non6":{
-                    delete symptomes['diarrhe'];
-                    break;
-                }
-                case "non7":{
-                    delete mineur['fatigue'];
+                            break;
+                        }
+                    case "non6":
+                        {
+                            delete symptomes['diarrhe'];
+                            break;
+                        }
+                    case "non7":
+                        {
+                            delete mineur['fatigue'];
 
-                    break;
-                }
-                case "non8":{
-                    delete mineur['fatigue_moitie_jour'];//moitié de la journée
-                    break;
-                }
-                case "non9":{
-                    delete majeur['difuculte'];
-                    break;
-                }
-                case "non10":{
-                    delete majeur['apparaitre'];
-                    break;
+                            break;
+                        }
+                    case "non8":
+                        {
+                            delete mineur['fatigue_moitie_jour']; //moitié de la journée
+                            break;
+                        }
+                    case "non9":
+                        {
+                            delete majeur['difuculte'];
+                            break;
+                        }
+                    case "non10":
+                        {
+                            delete majeur['apparaitre'];
+                            break;
+                        }
                 }
             }
-       }
 
-// end jamal
-// window.addEventListener("keydown", function (event) {
-        
-//         KEY=event.key.charCodeAt(0);
- 
-//         if(KEY >=48 && KEY <= 57){
-//             KEY = String.fromCharCode(KEY);
-           
-//             Inputs_number.value += KEY;
-//             if(Inputs_number.value >42 || Inputs_number.value <30){
-//                 Inputs_number.style.border = '2px solid red';
-//             }
-            
-//             else{
-//                 Inputs_number.style.border = '1px solid grey';
-//             }
-//         }
-//         else if(KEY == 66){
-//             Inputs_number.value = Inputs_number.value.slice(0 , -1);
-//             }
-//     });
-</script>
+            // end jamal
+            // window.addEventListener("keydown", function (event) {
+
+            //         KEY=event.key.charCodeAt(0);
+
+            //         if(KEY >=48 && KEY <= 57){
+            //             KEY = String.fromCharCode(KEY);
+
+            //             Inputs_number.value += KEY;
+            //             if(Inputs_number.value >42 || Inputs_number.value <30){
+            //                 Inputs_number.style.border = '2px solid red';
+            //             }
+
+            //             else{
+            //                 Inputs_number.style.border = '1px solid grey';
+            //             }
+            //         }
+            //         else if(KEY == 66){
+            //             Inputs_number.value = Inputs_number.value.slice(0 , -1);
+            //             }
+            //     });
+        </script>
+        <script src="Result.js"></script>
 </body>
 
 </html>
