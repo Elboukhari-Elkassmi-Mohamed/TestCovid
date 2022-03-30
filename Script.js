@@ -230,5 +230,6 @@ function res() {
         }
     }
     // alert(message);
-    document.querySelector('display').innerHTML = message;
+    localStorage.setItem("result",message);
+    location.href = 'result.html';
 }
