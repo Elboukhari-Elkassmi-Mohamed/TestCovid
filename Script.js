@@ -1,10 +1,10 @@
 class Pronostique {
-    constructor(age, poid, taille, hepertention, diabétique, cancer, respiratoire, dyalise, foie, enseinte, defenses_immunitaire, traitement) {
+    constructor(age, poid, taille, hepertention, diabetique, cancer, respiratoire, dyalise, foie, enseinte, defenses_immunitaire, traitement) {
         this.age = age;
         this.taille = taille;
         this.poid = poid;
         this.hepertention = hepertention;
-        this.diabetique = diabétique;
+        this.diabetique = diabetique;
         this.cancer = cancer;
         this.respiratoire = respiratoire;
         this.dyalise = dyalise;
@@ -146,42 +146,41 @@ traitement_non.addEventListener('click', (e) => {
 let ReponseTrue = {}
 const suivant = document.querySelector('.suivant');
 suivant.addEventListener('click', (e) => {
-        var response1 = new Pronostique(age.value, poid.value, taille.value, hyper, diabetique, cancer, respiratoire, dyalise, foie, enseinte, immunitaire, traitement);
+    var response1 = new Pronostique(age.value, poid.value, taille.value, hyper, diabetique, cancer, respiratoire, dyalise, foie, enseinte, immunitaire, traitement);
 
-        console.log(' \n age : ' + response1.age + ' \n poid :' + response1.poid + '\n taille :' + response1.taille + '\n hypertention' + response1.hepertention + '\n diabetique :' + response1.diabetique + '\n cancer :' + response1.cancer + '\n respiratoire :' + response1.respiratoire + '\n dyalise :' + response1.dyalise + ' \n foie :' + response1.foie + ' \n enseint:' + response1.enseinte + ' \n immunitaire:' + response1.defenses_immunitaire + '\n traitement : ' + response1.traitement);
+    console.log(' \n age : ' + response1.age + ' \n poid :' + response1.poid + '\n taille :' + response1.taille + '\n hypertention :' + response1.hepertention + '\n diabetique :' + response1.diabetique + '\n cancer :' + response1.cancer + '\n respiratoire :' + response1.respiratoire + '\n dyalise :' + response1.dyalise + ' \n foie :' + response1.foie + ' \n enseint:' + response1.enseinte + ' \n immunitaire:' + response1.defenses_immunitaire + '\n traitement : ' + response1.traitement);
 
-        if (hyper)
-            ReponseTrue['hypertention'] = true;
-        else
-            delete ReponseTrue['hypertention'];
-        if (diabetique) ReponseTrue['diabetique'] = true;
-        else delete ReponseTrue['diabetique'];
+    if (hyper)
+        ReponseTrue['hypertention'] = true;
+    else
+        delete ReponseTrue['hypertention'];
+    if (diabetique) ReponseTrue['diabetique'] = true;
+    else delete ReponseTrue['diabetique'];
 
-        if (cancer) ReponseTrue['cancer'] = true;
-        else delete ReponseTrue['cancer'];
+    if (cancer) ReponseTrue['cancer'] = true;
+    else delete ReponseTrue['cancer'];
 
-        if (respiratoire) ReponseTrue['respiratoire'] = true;
-        else delete ReponseTrue['respiratoire'];
+    if (respiratoire) ReponseTrue['respiratoire'] = true;
+    else delete ReponseTrue['respiratoire'];
 
-        if (dyalise) ReponseTrue['dyalise'] = true;
-        else delete ReponseTrue['dyalise'];
+    if (dyalise) ReponseTrue['dyalise'] = true;
+    else delete ReponseTrue['dyalise'];
 
-        if (foie) ReponseTrue['foie'] = true;
-        else delete ReponseTrue['foie'];
+    if (foie) ReponseTrue['foie'] = true;
+    else delete ReponseTrue['foie'];
 
-        if (enseinte) ReponseTrue['enseinte'] = true;
-        else delete ReponseTrue['enseinte'];
+    if (enseinte) ReponseTrue['enseinte'] = true;
+    else delete ReponseTrue['enseinte'];
 
-        if (immunitaire) ReponseTrue['immunitaire'] = true;
-        else delete ReponseTrue['immunitaire'];
+    if (immunitaire) ReponseTrue['immunitaire'] = true;
+    else delete ReponseTrue['immunitaire'];
 
-        if (traitement) ReponseTrue['traitement'] = true;
-        else delete ReponseTrue['traitement'];
+    if (traitement) ReponseTrue['traitement'] = true;
+    else delete ReponseTrue['traitement'];
 
-        console.log(ReponseTrue);
-    })
-    // const btnRes = document.getElementById("btnRes");
-    // btnRes.addEventListener("click", () => {
+    console.log(ReponseTrue);
+})
+
 let message;
 
 function res() {
@@ -191,11 +190,11 @@ function res() {
     let countSyMin = Object.keys(mineur).length;
     let CountfactPr = Object.keys(ReponseTrue).length;
 
-    // if (!countSyNormal) {
-    //     message = "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute.Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation.Pour toute information concernant le Covid - 19 allez vers la page d’ accueil.";
-    // } else if (countSyMaj) {
-    //     message = "Appel 141";
-    // } else
+    if (!countSyNormal) {
+        message = "Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute.Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation.Pour toute information concernant le Covid - 19 allez vers la page d’ accueil.";
+    } else if (countSyMaj) {
+        message = "Appel 141";
+    } else
     if (CountfactPr) {
         if (countSyMin >= 2)
             message = "appel 141";
@@ -228,8 +227,10 @@ function res() {
 
             }
         }
+    } else {
+        message = "Appelez le 141 si une gêne respiratoire ou des difficultésimportantes pour s’ alimenter ou boire pendant plusde 24 h apparaissent";
     }
     // alert(message);
-    localStorage.setItem("result",message);
+    localStorage.setItem("result", message);
     location.href = 'result.html';
 }
